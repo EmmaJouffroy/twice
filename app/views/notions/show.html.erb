@@ -1,0 +1,52 @@
+ <%= render 'layouts/header_timeline'%>
+
+
+
+
+<p id="notice"><%= notice %></p>
+
+<p class="text-center">
+  Comprenez l'évolution du numérique à travers le thème de
+  <%= @notion.name %>
+  grâce à ces articles :
+</p>
+<div class="container notion col-md-8 col-md-offset-2 notions">
+    <div class="row">
+    <% @notion.articles.each do |article| %>
+        <td><%= link_to article.titre, article_path%></td>
+        <% end %>
+    </div>
+</div>
+
+
+
+<div class="container notion col-md-8 col-md-offset-2 notions">
+    <div class="row">
+    <% @comments.each do |comment| %>
+        <td><%= comment.name%></td>
+        <td><%= comment.birthday%></td>
+        <td><%= comment.content%></td>
+        <% end %>
+    </div>
+</div>
+
+<div class="container notion col-md-8 col-md-offset-2 notions">
+  <div class="row">
+
+    <%= form_for :comment, url: create_comment_path(@notion) do |f| %>
+
+    <%= f.label :name, 'Votre nom' %>
+    <%= f.text_field :name %>
+    <%= f.label :birthday, 'Naissance' %>
+    <%= f.date_field :birthday %>
+    <%= f.label :content, 'Votre histoire' %>
+    <%= f.text_field :content %>
+    <%= f.submit :submit %>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+<%= link_to 'Back', notions_path %>

@@ -1,0 +1,30 @@
+header {
+  position: static;
+  top: 0;
+  width: 100%;
+  height: 180px;
+  background-image: url('header_bg.jpg');
+  background-position: center center;
+  repeat: no-repeat;
+  background-size: cover;
+
+    h1{
+      font-family: 'blacksword';
+      color: #ffffff;
+      font-size: 100px;
+      margin-top: 0;
+      padding-top: 31px;
+    }
+
+    a{
+      color: #ffffff;
+    }
+
+    a:visited{
+      color: #ffffff;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+}

@@ -1,0 +1,25 @@
+.img_header{
+  position: static;
+  top: 0;
+  width: 100%;
+  height: 180px;
+  background-position: center center;
+  repeat: no-repeat;
+  background-size: cover;
+  h2 {
+    margin-top: 0 ;
+    color: #ffffff;
+  }
+  h1{
+    margin-left: 25px;
+    font-size: 70px;
+    padding-top: 10px;
+  }
+  .search {
+    text-align: right;
+    margin-right: 15px;
+    padding-top: 0px;
+  }
+
+
+}
