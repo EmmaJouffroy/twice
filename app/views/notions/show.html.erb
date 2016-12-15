@@ -5,18 +5,16 @@
 
 <p id="notice"><%= notice %></p>
 
-<p class="text-center">
-  Comprenez l'évolution du numérique
-  <div id="fin_phrase" class="text-center">
+<p class="text-center comprendre">
+  Comprenez l'évolution du numérique <br>
     à travers le thème de <%= @notion.name %> grâce à ces articles :
-  </div>
 </p>
 
 <div class="container col-md-8 col-md-offset-2 liste_articles">
-    <div class="row">
-      <ul>
+    <div class="row text-center">
+      <ul class="text-center">
     <% @notion.articles.each do |article| %>
-        <li><%= link_to article.titre, article_path%></li>
+        <li class="text-center"><%= link_to article.titre, article_path%></li>
         <% end %>
       </ul>
     </div>
@@ -26,13 +24,13 @@
   <%= render 'layouts/header_comments'%>
 </div>
 
-<div class="container col-md-8 col-md-offset-2 comments">
+<div class="comments">
     <div>
       <ul>
     <% @comments.each do |comment| %>
-        <li><%= comment.name%><%= comment.birthday%></li>
+        <li><%= comment.name%>  <%= comment.birthday%></li>
         <li><%= comment.content%></li>
-        <br>
+        <br><br><hr>
         <% end %>
       </ul>
     </div>

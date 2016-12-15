@@ -23,9 +23,24 @@ img:hover {
 .comments {
   width: 60%;
   margin-left: 20%;
+  background-color: #F8F8F8;
+  max-height: 500px;
+  word-wrap: break-word;
+  overflow: auto;
 }
 
 .form_comments {
   position: static;
-  margin-bottom: 100px;
+  margin-bottom: 230px;
+}
+
+ul{
+  list-style: none;
+}
+
+.comprendre {
+  font-size: 20px;
+  font-weight: "Avenir";
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
