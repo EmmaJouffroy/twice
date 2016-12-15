@@ -1,7 +1,10 @@
-<p id="notice"><%= notice %></p>
-<div class="img_article">
-<%= image_tag("suivrehistoire.jpg",class: "img-header")%>
+
+<div>
+	<%= image_tag "suivrehistoire.jpg", class: "img_article" %>
 </div>
+
+<p id="notice"><%= notice %></p>
+
 <section class="cd-horizontal-timeline">
 	<div class="timeline">
 		<div class="events-wrapper"  style="background-color: #F8F8F8">
@@ -161,7 +164,5 @@
 	</div> <!-- .events-content -->
 </section>
 
-<h2><%= @article.titre %></h2>
-<p><%= @article.content %></p>
 
 <%= link_to 'Edit', edit_article_path(@article) %>
