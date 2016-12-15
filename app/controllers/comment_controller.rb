@@ -7,7 +7,7 @@ class CommentController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @notion, notice: 'Comment was successfully created.' }
+        format.html { redirect_to @notion }
         format.json { render :show, status: :created, location: @notion }
       else
         format.html { render :new }

@@ -6,35 +6,41 @@
 <p id="notice"><%= notice %></p>
 
 <p class="text-center">
-  Comprenez l'évolution du numérique à travers le thème de
-  <%= @notion.name %>
-  grâce à ces articles :
+  Comprenez l'évolution du numérique
+  <div id="fin_phrase" class="text-center">
+    à travers le thème de <%= @notion.name %> grâce à ces articles :
+  </div>
 </p>
-<div class="container notion col-md-8 col-md-offset-2 notions">
+
+<div class="container col-md-8 col-md-offset-2 liste_articles">
     <div class="row">
+      <ul>
     <% @notion.articles.each do |article| %>
-        <td><%= link_to article.titre, article_path%></td>
+        <li><%= link_to article.titre, article_path%></li>
         <% end %>
+      </ul>
     </div>
 </div>
 
+<div>
+  <%= render 'layouts/header_comments'%>
+</div>
 
-
-<div class="container notion col-md-8 col-md-offset-2 notions">
-    <div class="row">
+<div class="container col-md-8 col-md-offset-2 comments">
+    <div>
+      <ul>
     <% @comments.each do |comment| %>
-        <td><%= comment.name%></td>
-        <td><%= comment.birthday%></td>
-        <td><%= comment.content%></td>
+        <li><%= comment.name%><%= comment.birthday%></li>
+        <li><%= comment.content%></li>
+        <br>
         <% end %>
+      </ul>
     </div>
 </div>
 
-<div class="container notion col-md-8 col-md-offset-2 notions">
+<div class="container col-md-8 col-md-offset-2 form_comments">
   <div class="row">
-
     <%= form_for :comment, url: create_comment_path(@notion) do |f| %>
-
     <%= f.label :name, 'Votre nom' %>
     <%= f.text_field :name %>
     <%= f.label :birthday, 'Naissance' %>
@@ -46,7 +52,4 @@
   </div>
 </div>
 
-
-
-
-<%= link_to 'Back', notions_path %>
+<%= render 'layouts/footer'%>

@@ -41,7 +41,8 @@ Main Components
 
 .cd-horizontal-timeline {
 	opacity: 0;
-	margin: 2em auto;
+	margin: 0;
+	margin-top: -33px;
 	@include transition(opacity .2s);
 
 	&::before {
@@ -225,7 +226,7 @@ Main Components
 .cd-horizontal-timeline .events-content {
 	position: relative;
 	width: 100%;
-	margin: 2em 0;
+	margin: 0;
 	overflow: hidden;
 	@include transition(height .4s);
 
