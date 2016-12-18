@@ -75,14 +75,11 @@ outline: 0 none;
 .form-style-8 input[type="text"],
 .form-style-8 input[type="date"],
 .form-style-8 input[type="datetime"],
-.form-style-8 input[type="email"],
 .form-style-8 input[type="number"],
 .form-style-8 input[type="search"],
 .form-style-8 input[type="time"],
 .form-style-8 input[type="url"],
-.form-style-8 input[type="password"],
 .form-style-8 textarea,
-.form-style-8 select
 {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -108,7 +105,7 @@ outline: 0 none;
     -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
     box-shadow: inset 0px 1px 0px 0px #45D6D6;
     background-color: #477E79;
-    border: 1px solid #557B83;
+    border: 1px solid #557B8A;
     display: inline-block;
     cursor: pointer;
     color: #FFFFFF;

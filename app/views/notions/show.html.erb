@@ -6,15 +6,18 @@
 <p id="notice"><%= notice %></p>
 
 <p class="text-center comprendre">
-  Comprenez l'évolution du numérique <br>
+  Comprenez l'évolution du numérique <br><br>
     à travers le thème de <%= @notion.name %> grâce à ces articles :
 </p>
+
+<%= debug @comment.name %>
+
 
 <div class="container col-md-8 col-md-offset-2 liste_articles">
     <div class="row text-center">
       <ul class="text-center">
     <% @notion.articles.each do |article| %>
-        <li class="text-center"><%= link_to article.titre, article_path%></li>
+        <li class="text-center"><%= link_to article.titre, article_path%></li><hr>
         <% end %>
       </ul>
     </div>
@@ -28,10 +31,10 @@
     <div>
       <ul>
     <% @comments.each do |comment| %>
-        <li id="text_gras"><%= comment.name%> Né le <%= comment.birthday%></li><br>
-        <li><%= comment.content%></li>
+        <li id="text_gras"><%= comment.name%> <%= comment.birthday%></li><br>
+        <li><%=comment.content%></li>
         <br><br><hr>
-        <% end %>
+    <% end %>
       </ul>
     </div>
 </div>
@@ -40,11 +43,10 @@
 <div class="form-style-8">
   <form>
     <%= form_for :comment, url: create_comment_path(@notion) do |f| %>
-    <%= f.text_field :name, placeholder: "Votre nom" %>
-    <%= f.date_field :birthday %><br><br>
-    <%= f.text_field :content, placeholder: "Votre histoire"%><br><br>
-    <%= f.submit :submit %>
-
+      <%= f.text_field :name, placeholder: "Votre nom" %>
+      <%= f.date_field :birthday %><br><br>
+      <%= f.text_field :content, placeholder: "Votre histoire"%><br><br>
+      <%= f.submit :submit %>
     <% end %>
   </form>
 </div>
