@@ -10,8 +10,6 @@
     à travers le thème de <%= @notion.name %> grâce à ces articles :
 </p>
 
-<%= debug @comment.name %>
-
 
 <div class="container col-md-8 col-md-offset-2 liste_articles">
     <div class="row text-center">
@@ -39,16 +37,13 @@
     </div>
 </div>
 
-
 <div class="form-style-8">
-  <form>
-    <%= form_for :comment, url: create_comment_path(@notion) do |f| %>
+  <%= form_for @comment, url: create_comment_path(@notion) do |f| %>
       <%= f.text_field :name, placeholder: "Votre nom" %>
       <%= f.date_field :birthday %><br><br>
       <%= f.text_field :content, placeholder: "Votre histoire"%><br><br>
       <%= f.submit :submit %>
     <% end %>
-  </form>
 </div>
 
 
