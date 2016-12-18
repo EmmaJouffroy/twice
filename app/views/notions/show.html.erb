@@ -28,7 +28,7 @@
     <div>
       <ul>
     <% @comments.each do |comment| %>
-        <li><%= comment.name%>  <%= comment.birthday%></li>
+        <li id="text_gras"><%= comment.name%> Né le <%= comment.birthday%></li><br>
         <li><%= comment.content%></li>
         <br><br><hr>
         <% end %>
@@ -36,18 +36,22 @@
     </div>
 </div>
 
-<div class="container col-md-8 col-md-offset-2 form_comments">
-  <div class="row">
+
+<div class="form-style-8">
+  <form>
     <%= form_for :comment, url: create_comment_path(@notion) do |f| %>
-    <%= f.label :name, 'Votre nom' %>
-    <%= f.text_field :name %>
-    <%= f.label :birthday, 'Naissance' %>
-    <%= f.date_field :birthday %>
-    <%= f.label :content, 'Votre histoire' %>
-    <%= f.text_field :content %>
+    <%= f.text_field :name, placeholder: "Votre nom" %>
+    <%= f.date_field :birthday %><br><br>
+    <%= f.text_field :content, placeholder: "Votre histoire"%><br><br>
     <%= f.submit :submit %>
+
     <% end %>
-  </div>
+  </form>
 </div>
+
+
+
+
+
 
 <%= render 'layouts/footer'%>

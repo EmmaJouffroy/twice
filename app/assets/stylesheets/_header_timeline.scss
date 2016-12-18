@@ -6,6 +6,11 @@
   background-position: center center;
   repeat: no-repeat;
   background-size: cover;
+
+    -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    box-shadow: inset 0px 1px 0px 0px #45D6D6;
+
   h2 {
     margin-top: 0 ;
     color: #ffffff;
@@ -20,6 +25,5 @@
     margin-right: 15px;
     padding-top: 0px;
   }
-
 
 }
