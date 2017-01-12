@@ -1,33 +1,17 @@
-header {
-  position: static;
-  top: 0;
-  width: 100%;
-  height: 180px;
-  background-image: url('header_bg.jpg');
-  background-position: center center;
-  repeat: no-repeat;
-  background-size: cover;
-  -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-  -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-  box-shadow: inset 0px 1px 0px 0px #45D6D6;
+// SASS variable overrides must be declared before loading up Active Admin's styles.
+//
+// To view the variables that Active Admin provides, take a look at
+// `app/assets/stylesheets/active_admin/mixins/_variables.scss` in the
+// Active Admin source.
+//
+// For example, to change the sidebar width:
+// $sidebar-width: 242px;
 
-    h1{
-      font-family: 'blacksword';
-      color: #ffffff;
-      font-size: 100px;
-      margin-top: 0;
-      padding-top: 31px;
-    }
+// Active Admin's got SASS!
+@import "active_admin/mixins";
+@import "active_admin/base";
 
-    a{
-      color: #ffffff;
-    }
-
-    a:visited{
-      color: #ffffff;
-    }
-
-    a:hover {
-      text-decoration: none;
-    }
-}
+// Overriding any non-variable SASS must be done after the fact.
+// For example, to change the default status-tag color:
+//
+//   .status_tag { background: #6090DB; }
