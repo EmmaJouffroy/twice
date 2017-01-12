@@ -6,7 +6,7 @@ ActiveAdmin.register AdminUser do
     id_column
     column :email
     column "Dernière connexion", :current_sign_in_at
-    column "Enregistré", :sign_in_count
+    column "Connexions", :sign_in_count
     column "Créé le", :created_at
     actions
   end
