@@ -15,6 +15,8 @@ class Notion < ApplicationRecord
 
   validates_attachment_content_type :photo, content_type: /^image\/.+/i
 
-
+  def simple_name
+    I18n.transliterate(self.name.downcase)
+  end
 
 end
