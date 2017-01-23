@@ -280,20 +280,23 @@ Main Components
 	}
 
 	h2 {
-		font-weight: bold;
+		font-weight: lighter;;
 		font-size: 2.2rem;
 		font-family: 'avenir next';
-		font-weight: 12;
+		margin-bottom: 55px;
+
 	}
 
 	em {
 		display: block;
 		font-style: italic;
 		margin: 10px auto;
+		font-family: "Avenir next";
+		font-weight: lighter;
+			ol {
+				list-style: none;
+			}
 
-		&::before {
-			content: '- ';
-		}
 	}
 
 	p {
@@ -313,6 +316,9 @@ Main Components
 
 		em {
 			font-size: 2rem;
+				ol {
+					list-style: none;
+				}
 		}
 
 		p {

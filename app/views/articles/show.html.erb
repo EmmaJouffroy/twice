@@ -43,8 +43,8 @@
 
         <li class="<%= className %>" data-date="1/1/<%= i+1900 %>">
 
-  				<h2 class="text-center"><%= article.titre %></h2>
-					<%= article.photo %>
+  				<h2 class="text-center titre_article"><%= article.titre %></h2>
+					<div class="middle"><%= image_tag article.photo %></div>
   				<em><%= article.date %></em>
   				<p>
   					<%= article.content %>
