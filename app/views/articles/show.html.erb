@@ -51,7 +51,7 @@
   				</p>
 					<p>
 						<% article.notions.each do |n| %>
-						<%= link_to n.name, notion_path %>
+						<%= link_to n.name, notion_path(n.id)%>
 						<% end %>
 					</p>
   			</li>
