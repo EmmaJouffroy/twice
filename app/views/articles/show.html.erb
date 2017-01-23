@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<%= render 'layouts/header_articles'%>
 
 <section class="cd-horizontal-timeline">
 	<div class="timeline">
@@ -43,15 +43,15 @@
 
         <li class="<%= className %>" data-date="1/1/<%= i+1900 %>">
 
-  				<h2><%= article.titre %></h2>
-
+  				<h2 class="text-center"><%= article.titre %></h2>
+					<%= article.photo %>
   				<em><%= article.date %></em>
   				<p>
   					<%= article.content %>
   				</p>
 					<p>
 						<% article.notions.each do |n| %>
-						<%= n.name %>
+						<%= link_to n.name, notion_path %>
 						<% end %>
 					</p>
   			</li>
