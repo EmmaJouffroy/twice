@@ -1,8 +1,4 @@
 
-<div>
-	<%= image_tag "suivrehistoire.jpg", class: "img_article" %>
-</div>
-
 <p id="notice"><%= notice %></p>
 
 <section class="cd-horizontal-timeline">
@@ -37,6 +33,7 @@
         <li data-date="<%= article.date %>">
         <% end %>
   				<h2><%= article.titre %></h2>
+					<%= image_tag "dentiste.jpg", class: "img_article" %>
   				<em><%= article.date %></em>
   				<p>
   					<%= article.content %>
