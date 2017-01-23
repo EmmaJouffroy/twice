@@ -8,8 +8,8 @@
 			<div class="events">
 				<ol>
           <% @articles.each_with_index do |article, n| %>
-						<% className = n == 0 ? :selected : nil %>
-						<li><%= link_to article.date.year, article, data: { date: article.date.strftime("%d/%m/%Y") }, class: className %></li>
+						<% className = n == 0 ? [:selected, "older-event"] : nil %>
+						<li><%= link_to article.date.year, article, data: { date: article.date.strftime("%d/%m/%Y")}, class: className %></li>
           <% end %>
 				</ol>
 
@@ -33,7 +33,7 @@
         <li data-date="<%= article.date %>">
         <% end %>
   				<h2><%= article.titre %></h2>
-					<%= image_tag "dentiste.jpg", class: "img_article" %>
+
   				<em><%= article.date %></em>
   				<p>
   					<%= article.content %>

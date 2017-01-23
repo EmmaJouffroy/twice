@@ -5,10 +5,18 @@
 		<div class="events-wrapper"  style="background-color: #F8F8F8">
 			<div class="events">
 				<ol>
-					<li><a href="#0" data-date="10/10/1910" class="selected">1870</a></li>
-					<li><a href="#0" data-date="16/01/1982">1982</a></li>
-					<li><a href="#0" data-date="16/01/1990">2005</a></li>
-					<li><a href="#0" data-date="10/10/2020">2020</a></li>
+				  <% @articles.each do |article| %>
+						<% if article.date.year < @article.date.year
+							className = "older-event"
+						end
+						if article.date.year == @article.date.year
+							className = "selected"
+						else
+							className = ""
+						end %>
+
+						<li><%= link_to article.date.year, article, data: { date: article.date.strftime("%d/%m/%Y")}, class: className %></li>
+					<% end %>
 				</ol>
 
 				<span class="filling-line" aria-hidden="true"></span>
@@ -23,8 +31,27 @@
 
 	<div class="events-content">
 		<ol>
+      <% @articles.each do |article| %>
+				<% if article.date.year < @article.date.year
+					className = "older-event"
+				end
+				if article.date.year == @article.date.year
+					className = "selected"
+				else
+					className = ""
+				end %>
 
-			<li class="selected" data-date="10/10/1910">
+        <li class="<%= className %>" data-date="<%= article.date.strftime("%d/%m/%Y") %>">
+
+  				<h2><%= article.titre %></h2>
+
+  				<em><%= article.date %></em>
+  				<p>
+  					<%= article.content %>
+  				</p>
+  			</li>
+      <% end %>
+			<!-- <li class="selected" data-date="10/10/1910">
 
 				<h2>Les dentistes</h2>
 				<div>
@@ -140,7 +167,7 @@
 				<em>Corée du Sud, 2020</em>
 				<p>
 					Le grondement du public se fait entendre dans tout le stade. Nous ressentons une vague d’excitation à l’écoute des deux speakers commentant le match. L’ambiance est à la fois électrique et festive et l’immensité de la salle rend l’évènement d’autant plus impressionnant. Les projecteurs illuminent la grande scène, mettant en valeur les principaux protagonistes de ce spectacle épique. Deux équipes s’affrontent par écrans interposés et il est difficile de savoir qui a l’avantage. Nous sommes en train d’assister, mon frère et moi, à la finale e-sport en Corée du Sud du jeu Starcraft 2. Il s’agit d’un match en équipe de 3 contre 3 dont l’objectif principal est d’anéantir la base de ses adversaires. Nous sommes actuellement assis dans les gradins et observons avec attention l’écran géant du stade. Si j’en crois le panneau d’affichage, il s’agit d’une finale de 2020.</br></br>
-					- Whoa, sœurette c’est impressionnant à voir, quelle ambiance incroyable, dis-je !</br></br>
+					- Whoa, sœurette c’est impressionnant à 		voir, quelle ambiance incroyable, dis-je !</br></br>
 					- En effet, c’est toujours mieux d’être sur place pour assister à ce genre de spectacle. J’avais déjà vu plein de compétitions de ce genre avec mon casque virtuel, mais être au milieu des gradins c’est autre chose ! On ressent d’autant plus l’excitation du public, j’adore !</br></br>
 					- Oui, tout à fait d’accord. D’ailleurs c’est toi la spécialiste des jeux vidéo alors raconte-moi tout ! Qu’est-ce qui se passe exactement ?</br></br>
 					- Alors avant de tout t’expliquer, je vais remettre en contexte ce à quoi on assiste actuellement. L’e-sport ou sport électronique est un phénomène culturel massif qui a connu un développement important à partir des années 90. Avec le développement d’internet et des nouvelles technologies, les plateformes de streaming tel que Twitch ont rapidement vu le jour. Une quantité impressionnante de tournois et compétitions ont été retransmis dans le monde entier pour le plus grand plaisir des spectateurs. L’ampleur du phénomène est telle qu’une élite de joueurs a pu en faire son métier.</br></br>
@@ -151,7 +178,7 @@
 					- Et au sujet des jeux ? N’importe quel jeu peut-il convenir ?</br></br>
 					- Non. Bien que tous les jeux supportant des parties multi-joueurs soient susceptibles de faire partie du sport électronique, seul un nombre restreint le compose. En 2016, les principaux jeux qui représentent ce secteur sont : Starcraft 2, Hearthstone, World of Tank, Shoot Mania, Counter-Strike, Dota 2, League of Legends, FIFA et Super Street Figther IV.</br></br>
 					        	Soudain le grondement s’intensifie dans le stade, faisant vibrer les gradins dans un tremblement sans fin. Une des deux équipes vient de remporter la victoire. La foule est en délire et acclame avec ferveur l’équipe victorieuse, mettant fin à une compétition des plus acharnées.				</p>
-			</li>
+			</li> -->
 		</ol>
 	</div> <!-- .events-content -->
 </section>
