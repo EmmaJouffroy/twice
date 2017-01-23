@@ -45,6 +45,9 @@ Main Components
 	margin-top: -33px;
 	@include transition(opacity .2s);
 
+	display: flex;
+	flex-direction: column-reverse;
+
 	&::before {
 		/* never visible - this is used in jQuery to check the current MQ */
 		content: 'mobile';
@@ -82,12 +85,12 @@ Main Components
 
 		&::before {
 			left: 0;
-	    	@include background-image(linear-gradient(to right,$color-4, rgba($color-4, 0)));
+	    	@include background-image(linear-gradient(to right,white, rgba(255, 255, 255, 0)));
 		}
 
 		&::after {
 			right: 0;
-			@include background-image(linear-gradient(to left,$color-4, rgba($color-4, 0)));
+			@include background-image(linear-gradient(to left,white, rgba(255, 255, 255, 0)));
 		}
 	}
 
@@ -101,6 +104,9 @@ Main Components
 		/* width will be set using JavaScript */
 		background: darken($color-4, 10%);
 		@include transition(transform .4s);
+		ol {
+			list-style: none;
+		}
 	}
 
 	.filling-line {
@@ -122,6 +128,7 @@ Main Components
 		bottom: 0;
 		z-index: 2;
 		text-align: center;
+		text-decoration: none;
 		font-size: 1.3rem;
 		padding-bottom: 15px;
 		color: $color-1;
@@ -229,6 +236,10 @@ Main Components
 	margin: 0;
 	overflow: hidden;
 	@include transition(height .4s);
+
+	ol {
+		list-style: none;
+	}
 
 	li {
 		position: absolute;
