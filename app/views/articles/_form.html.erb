@@ -1,8 +1,8 @@
 <%= form_for(@article) do |f| %>
     <%= f.label :titre %>
     <%= f.text_field :titre %>
-    <%= f.label :year, 'date sur timeline' %>
-    <%= f.number_field :year %>
+    <%= f.label :date, 'date sur timeline' %>
+    <%= f.date_field :date %>
     <%= f.text_area :content %>
     <%= f.file_field :photo %>
     <%= f.file_field :audio %>

@@ -27,7 +27,7 @@ class Article < ApplicationRecord
 
   validates :titre,  presence: true
   validates :content,  presence: true
-  validates :year,  presence: true
+  validates :date,  presence: true
   has_attached_file :photo
   has_attached_file :video
   has_attached_file :audio

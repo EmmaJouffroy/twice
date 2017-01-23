@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20161202131028) do
   create_table "articles", force: :cascade do |t|
     t.string   "titre"
     t.text     "content"
-    t.integer  "year"
+    t.date     "date"
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
