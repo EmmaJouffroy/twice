@@ -8,6 +8,7 @@
 #  content    :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  notion_id  :integer
 #
 
 class Comment < ApplicationRecord
