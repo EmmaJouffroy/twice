@@ -5,7 +5,7 @@
   <div class="container choice">
       <div class="row">
           <div class="text-center">
-              <p id="suivreHistoire">COMPRENDRE L'HISTOIRE DU NUMERIQUE</p>
+              <p id="suivreHistoire">Comprendre l'histoire du numérique</p>
           </div>
           <div class="images">
           <div class="image_gauche">
@@ -18,27 +18,3 @@
     </div>
   </div>
 <%= render 'layouts/footer'%>
-
-
-
-
-
-
-
-<script>
-$(document).ready(function() {
-$("body").css("display", "none");
-
-$("body").fadeIn(2000);
-
-$("a.transition").click(function(event){
-    event.preventDefault();
-    linkLocation = this.href;
-    $("body").fadeOut(1000, redirectPage);
-});
-
-function redirectPage() {
-    window.location = linkLocation;
-}
-});
-</script>
