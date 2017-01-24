@@ -1,0 +1,5 @@
+form input[type=submit]:not(.disabled):hover, form input[type=button]:not(.disabled):hover, form button:not(.disabled):hover,
+form input[type=submit]:not(.disabled):focus, form input[type=button]:not(.disabled):focus, form button:not(.disabled):focus {
+  color: #fff;
+  outline: 0;
+}

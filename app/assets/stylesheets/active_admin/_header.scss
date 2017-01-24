@@ -505,7 +505,10 @@ form {
   /* Text Fields */
   /* semantic_errors */
   /* Buttons */
+  width: 50vw;
+  margin: 10vh auto;
 }
+
 /* line 5, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/_forms.scss */
 form ul, form ol, form li, form fieldset, form legend, form input, form textarea, form select, form p {
   margin: 0;
@@ -612,6 +615,7 @@ form .has_many_container.ui-sortable .has_many_container {
 /* line 76, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/_forms.scss */
 form .ui-sortable input[type=text], form .ui-sortable input[type=password], form .ui-sortable input[type=email], form .ui-sortable input[type=number], form .ui-sortable input[type=url], form .ui-sortable input[type=tel], form .ui-sortable textarea {
   width: calc(80% - 22px - 2em - 1px);
+
 }
 /* line 84, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/_forms.scss */
 form fieldset > ol > li fieldset {
@@ -826,8 +830,9 @@ form input[type=submit].disabled, form input[type=button].disabled, form button.
 }
 /* line 29, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
 form input[type=submit]:not(.disabled):hover, form input[type=button]:not(.disabled):hover, form button:not(.disabled):hover {
-  background-color: #8b9297;
-  background-image: linear-gradient(180deg, #8b9297, #484d51);
+  color: black;
+  outline: 0;
+  background-position: 0;
 }
 /* line 33, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
 form input[type=submit]:not(.disabled):active, form input[type=button]:not(.disabled):active, form button:not(.disabled):active {
@@ -1500,8 +1505,9 @@ table.index_table td {
 }
 /* line 29, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
 .ui-dialog .ui-dialog-buttonpane button:not(.disabled):hover {
-  background-color: #8b9297;
-  background-image: linear-gradient(180deg, #8b9297, #484d51);
+  color: black;
+  outline: 0;
+  background-position: 0;
 }
 /* line 33, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
 .ui-dialog .ui-dialog-buttonpane button:not(.disabled):active {
@@ -1839,14 +1845,12 @@ a.button.disabled, a:link.button.disabled, a:visited.button.disabled, input[type
 }
 /* line 29, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
 a.button:not(.disabled):hover, a:link.button:not(.disabled):hover, a:visited.button:not(.disabled):hover, input[type=submit]:not(.disabled):hover, input[type=button]:not(.disabled):hover, button:not(.disabled):hover {
-  background-color: #8b9297;
-  background-image: linear-gradient(180deg, #8b9297, #484d51);
+  background-color: transparent;
 }
 /* line 33, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
 a.button:not(.disabled):active, a:link.button:not(.disabled):active, a:visited.button:not(.disabled):active, input[type=submit]:not(.disabled):active, input[type=button]:not(.disabled):active, button:not(.disabled):active {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) inset, 0 1px 0 0px #FFF;
-  background-color: #71797f;
-  background-image: linear-gradient(180deg, #71797f, #35383b);
+  background-color: transparent;
 }
 
 /* line 2, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/components/_grid.scss */
@@ -1963,8 +1967,9 @@ a:hover {
 }
 /* line 29, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
 .pagination span.page.current:not(.disabled):hover {
-  background-color: #8b9297;
-  background-image: linear-gradient(180deg, #8b9297, #484d51);
+    color: black;
+    outline: 0;
+    background-position: 0;
 }
 /* line 33, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
 .pagination span.page.current:not(.disabled):active {
