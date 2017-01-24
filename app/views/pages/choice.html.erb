@@ -7,14 +7,19 @@
           <div class="text-center">
               <p id="suivreHistoire">Comprendre l'histoire du numérique</p>
           </div>
-          <div class="images">
+          <section class="images">
+            <div class="img_texte_gauche">
           <div class="image_gauche">
             <%=link_to (image_tag("suivrehistoire.jpg", alt: "suivre l'histoire")), article_url(1) %>
           </div>
+          <div>
+            <p></p>
+          </div>
+        </div>
           <div class="image_droite">
             <%=link_to (image_tag("choisirnotion.jpg", alt: "choisir une notion")), notions_path %>
           </div>
+        </section>
       </div>
-    </div>
   </div>
 <%= render 'layouts/footer'%>
