@@ -15,7 +15,7 @@
     <div class="row text-center">
       <ul class="text-center">
     <% @notion.articles.each do |article| %>
-        <li class="text-center"><%= link_to article.titre, article_path%></li><hr>
+        <li class="text-center"><%= link_to article.titre, article_path(article.id)%></li><hr>
         <% end %>
       </ul>
     </div>
