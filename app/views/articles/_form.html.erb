@@ -3,10 +3,15 @@
     <%= f.text_field :titre %>
     <%= f.label :date, 'date sur timeline' %>
     <%= f.date_field :date %>
+    <%= f.flabel :content, "ajoutez votre article" %>
     <%= f.text_area :content %>
+    <%= f.flabel :photo, "ajoutez votre photo" %>
     <%= f.file_field :photo %>
+    <%= f.flabel :audio, "ajoutez votre audio" %>
     <%= f.file_field :audio %>
+    <%= f.flabel :video, "ajoutez votre video" %>
     <%= f.file_field :video %>
+    <%= f.flabel :place, "ajoutez le lieu et la date de votre article (lieu - année)" %>
     <%= f.text_field :place %>
     <% notions_array = Notion.all.map { |notion| [notion.name, notion.id] } %>
     <%= f.select :notion_ids, options_for_select(notions_array), {}, {:multiple => true} %>
