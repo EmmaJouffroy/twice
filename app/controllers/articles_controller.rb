@@ -11,6 +11,8 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @articles = Article.order(date: :asc)
+    @notions = Notion.find(params[:id])
   end
 
   # GET /articles/new
@@ -74,7 +76,7 @@ class ArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit( :titre, :date, :content, :photo, :audio, :video, :notion_ids => [])
+      params.require(:article).permit( :titre, :date, :content, :photo, :audio, :video, :place, :notion_ids => [] )
     end
 
     def must_be_admin

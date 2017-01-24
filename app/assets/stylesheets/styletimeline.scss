@@ -45,6 +45,9 @@ Main Components
 	margin-top: -33px;
 	@include transition(opacity .2s);
 
+	display: flex;
+	flex-direction: column-reverse;
+
 	&::before {
 		/* never visible - this is used in jQuery to check the current MQ */
 		content: 'mobile';
@@ -82,12 +85,12 @@ Main Components
 
 		&::before {
 			left: 0;
-	    	@include background-image(linear-gradient(to right,$color-4, rgba($color-4, 0)));
+	    	@include background-image(linear-gradient(to right,white, rgba(255, 255, 255, 0)));
 		}
 
 		&::after {
 			right: 0;
-			@include background-image(linear-gradient(to left,$color-4, rgba($color-4, 0)));
+			@include background-image(linear-gradient(to left,white, rgba(255, 255, 255, 0)));
 		}
 	}
 
@@ -101,6 +104,9 @@ Main Components
 		/* width will be set using JavaScript */
 		background: darken($color-4, 10%);
 		@include transition(transform .4s);
+		ol {
+			list-style: none;
+		}
 	}
 
 	.filling-line {
@@ -122,6 +128,7 @@ Main Components
 		bottom: 0;
 		z-index: 2;
 		text-align: center;
+		text-decoration: none;
 		font-size: 1.3rem;
 		padding-bottom: 15px;
 		color: $color-1;
@@ -230,6 +237,10 @@ Main Components
 	overflow: hidden;
 	@include transition(height .4s);
 
+	ol {
+		list-style: none;
+	}
+
 	li {
 		position: absolute;
 		z-index: 1;
@@ -269,21 +280,23 @@ Main Components
 	}
 
 	h2 {
-		font-weight: bold;
-		font-size: 2.6rem;
-		font-family: $secondary-font;
-		font-weight: 700;
-		line-height: 1.2;
+		font-weight: lighter;;
+		font-size: 2.2rem;
+		font-family: 'avenir next';
+		margin-bottom: 55px;
+
 	}
 
 	em {
 		display: block;
 		font-style: italic;
 		margin: 10px auto;
+		font-family: "Avenir next";
+		font-weight: lighter;
+			ol {
+				list-style: none;
+			}
 
-		&::before {
-			content: '- ';
-		}
 	}
 
 	p {
@@ -303,6 +316,9 @@ Main Components
 
 		em {
 			font-size: 2rem;
+				ol {
+					list-style: none;
+				}
 		}
 
 		p {

@@ -1,14 +1,22 @@
-<p id="notice"><%= notice %></p>
+<%= render 'layouts/header_articles'%>
 
 <section class="cd-horizontal-timeline">
 	<div class="timeline">
-		<div class="events-wrapper"  style="background-color: #F8F8F8">
+		<div class="events-wrapper">
 			<div class="events">
 				<ol>
-					<li><a href="#0" data-date="10/10/1910" class="selected">1870</a></li>
-					<li><a href="#0" data-date="16/01/1982">1982</a></li>
-					<li><a href="#0" data-date="16/01/1990">2005</a></li>
-					<li><a href="#0" data-date="10/10/2020">2020</a></li>
+				  <% @articles.each.with_index do |article, i| %>
+						<% if article.date.year < @article.date.year
+							className = "older-event"
+						end
+						if article.date.year == @article.date.year
+							className = "selected"
+						else
+							className = ""
+						end %>
+
+						<li><%= link_to article.date.year, article, data: { date: '1/1/'+(i+1900).to_s}, class: className %></li>
+					<% end %>
 				</ol>
 
 				<span class="filling-line" aria-hidden="true"></span>
@@ -23,135 +31,35 @@
 
 	<div class="events-content">
 		<ol>
+      <% @articles.each.with_index do |article, i| %>
+				<% if article.date.year < @article.date.year
+					className = "older-event"
+				end
+				if article.date.year == @article.date.year
+					className = "selected"
+				else
+					className = ""
+				end %>
 
-			<li class="selected" data-date="10/10/1910">
+        <li class="<%= className %>" data-date="1/1/<%= i+1900 %>">
 
-				<h2>Les dentistes</h2>
-				<div>
-					<%= image_tag "dentiste.jpg", class: "img_article" %>
-				</div>
-				<em>Foire de Toucy, 1870</em>
-				<p>
-					Mon voyage temporel ne s’est pas passé comme je l’avais prévu. La date estimée ne ressemble en rien à celle que j’ai actuellement sous les yeux. Mon écran affiche 1870 au lieu de 2017. J’en déduis rapidement que les tremblements ressentis durant le voyage ont déréglé les calculs que j’avais initialement rentrés. Je me retrouve au milieu d’une foule de gens, aucune trace de ma sœur. En observant mon environnement, je constate que l’ambiance est particulièrement festive. Soudain mon attention se focalise sur une pancarte sur laquelle est inscrit « Foire de Toucy ». La bonne nouvelle c’est que je sais à présent où je suis. La mauvaise c’est que je n’arrive pas à contacter ma sœur.  Je crois bien qu’il va me falloir patienter un petit peu. Autant en profiter pour me balader et en apprendre plus sur ce lieu.
-				Je parcours les allées en me laissant guider par le flux des passants. Je ressens l’amusement et le plaisir de la foule, ce qui n’est pas pour me déplaire. Après plusieurs minutes, j’aperçois au loin une estrade de fortune. Intrigué, je décide de me rapprocher pour voir de quoi il s’agit exactement. Un sourire se dessine naturellement sur mes lèvres. Ma présence en ces lieux est loin d’être anodine. Bien que l’époque ne soit pas la bonne, mon but premier est plus ou moins accompli.
-				 Initialement, je devais me rendre avec ma sœur en 2017 pour en apprendre plus sur le métier de dentiste et comprendre l’impact du numérique sur l’évolution de cette profession. Mais à cause des dérèglements rencontrés lors de mon voyage, je me suis retrouvé en 1870, face à une estrade d’arracheur de dents. Je ne peux m’empêcher d’éclater de rire face à cette situation ironique, captant au passage le regard de la foule intriguée par ma réaction soudaine.
-				En observant l’estrade,  je distingue 6 hommes au total. L’un est assis sur une chaise, la tête penchée en arrière, j’imagine qu’il s’agit du patient. A ses cotés se dresse un dentiste tenant dans sa main gauche une énorme pince métallique. Les 4 personnes restantes sont un groupe de musiciens mais je ne saisis pas bien leur utilité. En y regardant de plus près, je distingue plusieurs instruments. Cet orchestre de fortune est constitué d’un tambour et d’une grosse caisse, d’un cornet à piston et d’un trombone. Soudain une anecdote me revient à l’esprit. J’ai entendu dire que les arracheurs de dents utilisaient des musiciens pour couvrir les cris des patients pendant l’opération. J’en ai vite la confirmation quand je vois le chirurgien se saisir avec force de la dent et faire signe aux groupe de commencer à jouer. Ce spectacle des plus horribles me fait détourner le regard. Seuls les cris du malheureux m’indiquent que le dentiste est en pleine opération. Je décide alors de m’éloigner de l’estrade pour échapper à ce vacarme.
-				Après quelques minutes de marche, je reçois enfin un appel de ma sœur.</br></br>
-				- Ah Frérot, j’arrive enfin à te joindre, mais où es-tu donc ? me demande-t-elle.</br></br>
-				- Tu ne vas pas me croire mais j’ai eu quelques problèmes durant le voyage. Je suis actuellement en 1870 à la foire de Toucy. J’ai assisté à mon grand regret à la démonstration d’un dentiste de l’époque.</br></br>
-				- J’imagine donc qu’il va falloir t’expliquer ce que j’ai appris sur les dentistes de 2017 et leur rapport avec le numérique.</br></br>
-				- Oui et j’espère que les patients de ton époque souffrent beaucoup moins que ceux de 1870…</br></br>
-				- Ne t’inquiète pas, le métier de dentiste a énormément évolué en l’espace d’un siècle et demi. Comme tu as du le voir de tes propres yeux, les arracheurs de dents n’utilisaient pas de produits anesthésiants. Ils étaient connus pour promettre à leurs patients qu’ils ne souffriraient pas. C’est de la que provient la célèbre expression, « mentir comme un arracheur de dents ».  Aujourd’hui, les patients ne ressentent presque plus la douleur grâce aux piqures anesthésiantes. Le numérique a apporté beaucoup en termes de précision et de rapidité lors des interventions. Les dentistes utilisent du matériel informatique et des instruments pour détecter et cibler les zones malades.</br></br>
-				- En effet, on est loin du spectacle auquel j’ai assisté…</br></br>
-				 - A titre d’exemple, pour fabriquer et poser une couronne, il fallait plusieurs séances. A présent il suffit seulement d’1h30 ou de deux séances au maximum. Le dentiste utilise une caméra intra-buccale. Il s’agit d’une sorte de lampe torche. Il va scanner l’intérieur de la bouche afin d’enregistrer un modèle 3D des dents et de la mâchoire. L’étape suivante consiste à envoyer à un prothésiste le fichier obtenu. Dès qu’il le reçoit, le prothésiste usine la couronne à partir d’un bloc de céramique. Grâce au modèle 3D, la précision de la couronne se fait au micron prêt. Certains dentistes réalisent eux-mêmes la prothèse. Avant le numérique, il fallait parfois s’y prendre plusieurs fois pour que la couronne soit bien adaptée au patient. Mais à présent la précision garantit 100 % de réussite.</br></br>
-				- As-tu d’autres exemples à me donner ?</br></br>
-				- Oui frérot, je vois que ta soif de savoir est insatiable. Lors des interventions, les dentistes s’aident de leurs écrans pour visualiser la bouche du patient en temps réel. Grâce à cela, ils sont bien plus efficaces pendant l’opération et peuvent soigner les malades avec bien plus de précision. Il y a aussi le concept du Digital Smile Design. Son objectif principal est d’améliorer l’esthétique de la dentition par l’intermédiaire de pose de facettes. Le principe est, dans un premier temps, de récolter des informations sur la dentition du patient. Puis dans un second temps, d’établir une évaluation esthétique grâce à la simulation par ordinateur. Le patient peut ainsi visualiser le résultat final avant la pose définitive des facettes.</br></br>
-				- Tout est clair à présent. Je pense avoir compris les avancés apportées par le numérique dans la profession de dentiste. Après ce que j’ai vu, ce métier en avait bien besoin. Je crois qu’il est temps de quitter nos époques respectives pour nous rejoindre.
-				</p>
-			</li>
-
-
-			<li data-date="16/01/1982">
-
-				<h2>Dessinateur d’animation 2D</h2>
-				<div>
-					<%= image_tag "2D.jpg", class: "img_article" %>
-				</div>
-				<em>Etats-Unis, 1982</em>
-				<p>
-					Je me retrouve actuellement en 1928, aux Etats-Unis dans un studio d’animation. Je réalise très vite que je suis témoin de la création du premier court métrage de Walt Disney, « Plane Crazy ».</br></br>
-- Eh sœurette ! Tu devineras jamais où je suis actuellement, dis-je.</br></br>
-- Vas-y, raconte-moi tout.</br></br>
-- J’assiste à la réalisation du dessin animé où l’on rencontre pour la première fois le célèbre personnage de « Mickey » nommé « Mortimer » à ces débuts. Tel que je le vois actuellement, il ne s’agit là que d’une ébauche. La petite souris prendra son nom définitif dans le dessin animé sonore,"Steamboat Willie".</br></br>
-					 - Woua génial ! Quant à moi, je suis actuellement au Japon, en 2015. Je suis à l’intérieur des studios SHAFT et j’assiste à la création du film Kizumonogatari. J’imagine que le métier de dessinateur animation 2D des années 20 n’a rien à voir avec celui de mon époque ?</br></br>
-					 - En effet, les techniques utilisées sont différentes. Le métier de dessinateur a évolué en même temps que les nouvelles technologies. Mais avant que l’on en parle, commençons par les débuts de l’animation. Le principe du cinéma d’animation a existé avant le cinéma. Tous les films tournés sur pellicule  ne sont qu’une succession d’images fixes donnant l’illusion du mouvement.</br></br>
-					 - Et comment ça marche concrètement ?</br></br>
-- C’est un phénomène créé par notre œil que l’on appelle « persistance rétinienne ». L’œil garde en mémoire l’image précédente et superpose l’image suivante, ce qui donne l’impression de mouvement. Il faut 24 images par seconde pour assurer la fluidité du mouvement et tromper le cerveau du spectateur.</br></br>
-- Et ces images, comment les fabrique-t-on ?</br></br>
-				 - Les dessinateurs de l’époque utilisaient des « cellulos » ou « celluloïds ». Il s’agissait de feuilles plastiques transparentes sur lesquelles on peignait et encrait ses personnages et objets. Pour les décors, ils étaient peints sur du papier épais. Pour finir, les cellulos et le décor étaient associés, puis photographiés par une machine pour obtenir une pellicule.  En 2015, les studios et dessinateurs qui utilisent encore les cellulos se font de plus en plus rares mais existent toujours.</br></br>
-- Je vois, je comprends mieux les techniques de l’époque. A présent, permets-moi de prendre le relais pour t’expliquer ce qu’il se passe ici. C’est durant les années 90, avec l’apparition d’ordinateurs de plus en plus puissants, que le métier de dessinateur va évoluer. L’apparition de logiciels performants et de tablettes à dessin va bouleverser les pratiques et techniques. A présent, presque tout est fait intégralement par ordinateur. Dans un premier temps le dessinateur crayonne une esquisse sur feuille. Puis dans un second temps, il scanne son dessin et retravaille les traits sur logiciel pour affiner et coloriser le tout. On parle de 2D numérique. Ces nouveaux procédés apportent au dessinateur un gain de temps et d’argent incroyable par rapport aux techniques des années 20.</br></br>
-- Je pense qu’on a trouvé les réponses à nos questions en ce qui concerne cette évolution apportée par le numérique. Nous pouvons à présent nous rendre à la prochaine destination de notre voyage.
-				</p>
-			</li>
-			<li data-date="16/01/1990">
-
-				<h2>Les Youtubeurs</h2>
-				<div>
-					<%= image_tag "youtube.jpg", class: "img_article" %>
-				</div>
-				<em>San Diego, 2005</em>
-				<p>
-					Nous sommes tranquillement installés dans le salon. Moi, affalé sur le canapé, prenant un peu de repos, et ma soeur, sur son ordinateur portable, en train de regarder une vidéo d’un YouTubeur connu sans ses écouteurs. D’ailleurs, quand j’y pense, Youtubeur, en voilà un drôle de nom. Pourtant, celui-ci s'est complètement ancré dans les médias, réduisant au silence son appellation la plus exacte : "vidéaste". Un Youtubeur est donc un vidéaste qui poste ses vidéos sur YouTube. Mais c'est un mot qui caractérise surtout les personnalités les plus célèbres de la plate-forme : "Cyprien", "Norman", "Squeezie", des noms qui parlent à toute la jeunesse. Et c'est un phénomène incroyable que d’arriver à transformer  le nom d'une marque en activité professionnelle. Pourtant, YouTube n'est pas leur patron, juste leur hébergeur, celui qui leur fournit les outils pour publier et diffuser leurs créations, tout en prenant une partie des revenus sur les vidéos monétisées.</br></br>
-
-					Voici un métier qui aura suscité beaucoup d'incompréhension chez les personnes peu connaisseuses de toutes ces nouvelles technologies. Comment des jeunes sans qualification particulière, avec pour unique matériel une caméra et pour décor leur chambre, ont-ils pu percer sur la toile ? Véritables OVNI auprès des journalistes et chroniqueurs de la télévision, de la radio et la presse, ils se voient rapidement transformés comme une véritable mine d'or pour ramener les tranches les plus jeunes vers ces médias de plus en plus délaissés. Ainsi, nous ne nous surprenons plus de voir EnjoyPhoenix dans l'émission "Danse avec les stars" sur TF1, ou encore à "Fort Boyard", tandis que les humoristes de la chaîne "Studio Bagel" présentent leurs sketchs et programmes courts sur la chaîne de Canal +. Toutes ces personnalités qui sont nées sur YouTube sont comme liées à vie à ce nom et cette plate-forme qui leur a apporté leur célébrité d’aujourd'hui. N'est-ce pas là la preuve que YouTube affirme une position de leader indétrônable, tellement il s’est immiscé dans notre quotidien, et dans tous les autres médias ?</br></br>
-
-					Il faut que l’on assiste aux tous débuts de YouTube, crie-je en me relevant subitement du canapé.
-
-					Ma soeur appuie sur le bouton pause et se retourne vers moi.
-
-					-Qu’est-ce qu’il te prend tout à coup ?</br></br>
-					-Euh, et bien, j’ai eu une idée un peu soudaine, comme ça.</br></br>
-					-Mmh… C’est d’accord ! Allons voir les débuts de YouTube !</br></br>
-					-Vraiment ? Sur un coup de tête, tu me suis ?</br></br>
-					-Bien sûr, ma soif de curiosité n’a pas de limite.</br></br>
-
-					Puis un petit silence s’installe entre nous, l’espace de quelques secondes.</br></br>
-					-Euh … Ca a été créé où et quand YouTube, au fait ?, demande ma soeur.</br></br>
-					-Je n’en ai aucune idée … Aux Etats-Unis c’est sûr, mais je saurai pas être plus précis.</br></br>
-					-Je vais chercher sur Internet.</br></br>
-
-					Deux clics plus tard, nous avions l’information : la plate-forme de vidéos YouTube a été créée le 14 février 2005 par Steve Chen, Chad Hurley et Jawed Karim, d’anciens employés de Paypal. Un drôle de cadeau pour la Saint Valentin. Le site a été développé dans un bâtiment à San Matero, en Californie, et plus précisément entre une pizzeria et un restaurant Japonais. Nous avions suffisamment d’informations pour voir de nos propres yeux la création d’un des sites les plus importants du web en 2016.</br></br>
-
-					-Attends, tu veux faire quoi exactement ? Frapper à leur porte et leur dire “Coucou, d’ici quelques années, vous serez millionnaires” ?, rétorque ma soeur.</br></br>
-
-					-C’est vrai que ça serait bizarre.</br></br>
-
-					-Et si nous faisions plutôt une petite visite du zoo de San Diego ?</br></br>
-					-Quel rapport ?, dis-je.</br></br>
-					-Tu verras, je te prépare une surprise. Direction San Diego, le 23 avril 2005 !</br></br>
-
-					Ni une, ni deux, nous utilisons la machine pour voyager selon les coordonnées décrites par ma soeur.
-
-					San Diego, 2005. Le ciel est un peu gris, une veste n’est pas de trop. Je suis ma soeur qui semble savoir exactement où aller. Elle marche dans les rues d’un air enthousiaste, me traînant par le bras.</br></br>
-
-					-Le zoo est là ! Allons-y !, s’exclame-t-elle.</br></br>
-					-Tu as de la monnaie pour payer l’entrée ?</br></br>
-
-					Evidemment, la réponse était non. Ma soeur commence alors à discuter avec un groupe de personnes qui attendait devant l’entrée. 5 minutes plus tard, nous nous retrouvons à l’intérieur du zoo. Une californienne d’un certain âge avait gentiment accepté de nous payer l’entrée. Nous lui sommes extrêmement reconnaissant pour cet acte de générosité.</br></br>
-
-					-Bon, maintenant qu’on est dans le zoo, veux-tu bien me dire pourquoi on est là, chère frangine !</br></br>
-					-Les éléphants, il faut trouver où sont les éléphants.</br></br>
-
-					Le mystère ne faisait que s’épaissir. Après avoir suivi les indications du plan sur le grand panneau à l’entrée, nous nous trouvons enfin l’enclos des tant recherchés pachydermes.</br></br>
-
-					-Ca y est, tu es contente ?</br></br>
-					-Chut ! Regarde là-bas, tu vois la personne qui est filmée par son ami ? Et bien, il s’agit de Jawed Karim, l’un des cofondateurs de YouTube. Et il est en train de filmer la toute première vidéo qui sera uploadée sur YouTube.</br></br>
-
-					Je n’en reviens pas, cet événement banal était en train de prendre tout à coup une notion symbolique si forte. C’est incroyable le pouvoir que peuvent avoir soudainement les “premières pierres” d’un projet qui deviendra dantesque par la suite. Pourtant ce n’était qu’une vidéo test, comme n’importe qui en ferait pour tester les fonctionnalités sur son site … Mais se dire qu’en 2016, cette vidéo aura cumulé plus de 34 millions de vues … Je crois que ce sont des chiffres qui dépassent mon esprit. Merci, soeurette, de m’avoir fait cette surprise.
-				</p>
-			</li>
-
-
-			<li data-date="10/10/2020">
-				<h2>L’e-sport et les e-sportifs</h2>
-				<div>
-					<%= image_tag "sport.jpg", class: "img_article" %>
-				</div>
-				<em>Corée du Sud, 2020</em>
-				<p>
-					Le grondement du public se fait entendre dans tout le stade. Nous ressentons une vague d’excitation à l’écoute des deux speakers commentant le match. L’ambiance est à la fois électrique et festive et l’immensité de la salle rend l’évènement d’autant plus impressionnant. Les projecteurs illuminent la grande scène, mettant en valeur les principaux protagonistes de ce spectacle épique. Deux équipes s’affrontent par écrans interposés et il est difficile de savoir qui a l’avantage. Nous sommes en train d’assister, mon frère et moi, à la finale e-sport en Corée du Sud du jeu Starcraft 2. Il s’agit d’un match en équipe de 3 contre 3 dont l’objectif principal est d’anéantir la base de ses adversaires. Nous sommes actuellement assis dans les gradins et observons avec attention l’écran géant du stade. Si j’en crois le panneau d’affichage, il s’agit d’une finale de 2020.</br></br>
-					- Whoa, sœurette c’est impressionnant à voir, quelle ambiance incroyable, dis-je !</br></br>
-					- En effet, c’est toujours mieux d’être sur place pour assister à ce genre de spectacle. J’avais déjà vu plein de compétitions de ce genre avec mon casque virtuel, mais être au milieu des gradins c’est autre chose ! On ressent d’autant plus l’excitation du public, j’adore !</br></br>
-					- Oui, tout à fait d’accord. D’ailleurs c’est toi la spécialiste des jeux vidéo alors raconte-moi tout ! Qu’est-ce qui se passe exactement ?</br></br>
-					- Alors avant de tout t’expliquer, je vais remettre en contexte ce à quoi on assiste actuellement. L’e-sport ou sport électronique est un phénomène culturel massif qui a connu un développement important à partir des années 90. Avec le développement d’internet et des nouvelles technologies, les plateformes de streaming tel que Twitch ont rapidement vu le jour. Une quantité impressionnante de tournois et compétitions ont été retransmis dans le monde entier pour le plus grand plaisir des spectateurs. L’ampleur du phénomène est telle qu’une élite de joueurs a pu en faire son métier.</br></br>
-					- Attends voir, des joueurs gagnent leur vie avec l’e-sport ?</br></br>
-					- Parfaitement, et ça depuis un bon nombre d’années. On les appelle des e-sportifs. Ce sont des joueurs professionnels équivalents à des sportifs de très haut niveau. Ils s'entraînent plusieurs heures par jour, surveillent leurs alimentations et étudient dans les moindres détails les jeux auxquels ils jouent. Le but étant d’être le meilleur, aussi bien en solo qu’en équipe et de gagner tournois régionaux, nationaux et mondiaux. Les plus gros joueurs reçoivent des salaires plus ou moins importants en fonction de leurs talents et du spectacle qu’ils offrent au public. De 1000 à 3000 euros par mois pour les moins bien cotés et des centaines de milliers d’euros par an pour une poignée d’élus.  Les meilleurs d’entre eux se qualifient pour les finales et gagnent d’énormes récompenses, pouvant aller jusqu’à 17 millions d’euros. L’e-sport draine à présent des millions de spectateurs et des millions d’euros de revenus. Dans ce secteur en pleine évolution, de nouveaux métiers émergent comme par exemple celui de « coach e-sport».</br></br>
-					- Mais du coup les différences entre un sportif et un e-sportif sont minimes ?</br></br>
-					- Exactement ! En 2016 un e-sportif se rapproche énormément d’un sportif professionnel. Ils sont eux aussi sponsorisés et représentent des marques durant les compétitions. Ils possèdent tous sans exception des maillots, symboles de leur équipe.</br></br>
-					- Et au sujet des jeux ? N’importe quel jeu peut-il convenir ?</br></br>
-					- Non. Bien que tous les jeux supportant des parties multi-joueurs soient susceptibles de faire partie du sport électronique, seul un nombre restreint le compose. En 2016, les principaux jeux qui représentent ce secteur sont : Starcraft 2, Hearthstone, World of Tank, Shoot Mania, Counter-Strike, Dota 2, League of Legends, FIFA et Super Street Figther IV.</br></br>
-					        	Soudain le grondement s’intensifie dans le stade, faisant vibrer les gradins dans un tremblement sans fin. Une des deux équipes vient de remporter la victoire. La foule est en délire et acclame avec ferveur l’équipe victorieuse, mettant fin à une compétition des plus acharnées.				</p>
-			</li>
+  				<h2 class="text-center titre_article"><%= article.titre %></h2>
+					<div class="middle"><%= image_tag article.photo %></div>
+  				<em><%= article.place %></em>
+  				<p>
+  					<%= article.content.gsub("\n", "<br>").html_safe %>
+  				</p>
+					<p>Notions liées à l'article : </p<
+					<p>
+						<% article.notions.each do |n| %>
+							<%= link_to n.name, notion_path(n.id)%>,
+								<% if admin_user_signed_in? %>
+									<%= link_to "edit article", edit_article_path %>
+									<% end %>
+								t<% end %>
+					</p>
+  			</li>
+      <% end %>
 		</ol>
 	</div> <!-- .events-content -->
 </section>

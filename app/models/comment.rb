@@ -13,4 +13,7 @@
 
 class Comment < ApplicationRecord
   belongs_to :notion
+
+  has_attached_file :photo, styles: { vignette: '300x300#' }
+
 end
