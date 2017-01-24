@@ -23,3 +23,10 @@
 @import "header_comments";
 @import "_form_new_article";
 @import "header_articles";
+
+@font-face {
+  font-family: 'Avenir Next';
+  font-weight: normal;
+  font-style: normal;
+  src: asset-url('AvenirNext.otf');
+}

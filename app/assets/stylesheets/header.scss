@@ -7,24 +7,19 @@ header {
   background-position: center center;
   repeat: no-repeat;
   background-size: cover;
-  -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-  -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-  box-shadow: inset 0px 1px 0px 0px #45D6D6;
 
     h1{
-      font-family: 'blacksword';
-      color: #ffffff;
-      font-size: 100px;
       margin-top: 0;
-      padding-top: 31px;
+      padding: 10px 0 20px 0;
     }
 
     a{
-      color: #ffffff;
-    }
-
-    a:visited{
-      color: #ffffff;
+      background: asset-url('twice.svg') no-repeat center center / contain;
+      width: 212px;
+      height: 106px;
+      color: transparent;
+      font-size: 0;
+      display: inline-block;
     }
 
     a:hover {
