@@ -1,13 +1,16 @@
 <%= form_for(@article) do |f| %>
     <%= f.label :titre %>
     <%= f.text_field :titre %>
-    <%= f.label :date, 'date sur timeline' %>
+    <%= f.label :date, 'Date sur timeline' %>
     <%= f.date_field :date %>
+    <%= f.label :content, "Contenu de l'article" %>
     <%= f.text_area :content %>
     <%= f.file_field :photo %>
     <%= f.file_field :audio %>
     <%= f.file_field :video %>
     <% notions_array = Notion.all.map { |notion| [notion.name, notion.id] } %>
     <%= f.select :notion_ids, options_for_select(notions_array), {}, {:multiple => true} %>
+    <div class='button green'>
     <%= f.submit :submit %>
+    </div>
 <% end %>

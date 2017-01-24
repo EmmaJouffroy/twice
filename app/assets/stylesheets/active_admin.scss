@@ -1380,8 +1380,9 @@ form input[type=submit].disabled, form input[type=button].disabled, form button.
 /* line 29, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
 /* line 828, /Users/onclick/workspace/twice/app/assets/stylesheets/active_admin/_header.scss */
 form input[type=submit]:not(.disabled):hover, form input[type=button]:not(.disabled):hover, form button:not(.disabled):hover {
-  background-color: #8b9297;
-  background-image: linear-gradient(180deg, #8b9297, #484d51);
+  color: black;
+  outline: 0;
+  background-position: 0;
 }
 
 /* line 33, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
@@ -2229,8 +2230,9 @@ table.index_table td {
 /* line 29, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
 /* line 1502, /Users/onclick/workspace/twice/app/assets/stylesheets/active_admin/_header.scss */
 .ui-dialog .ui-dialog-buttonpane button:not(.disabled):hover {
-  background-color: #8b9297;
-  background-image: linear-gradient(180deg, #8b9297, #484d51);
+  color: black;
+  outline: 0;
+  background-position: 0;
 }
 
 /* line 33, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
@@ -2637,8 +2639,9 @@ a.button.disabled, a:link.button.disabled, a:visited.button.disabled, input[type
 /* line 29, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
 /* line 1842, /Users/onclick/workspace/twice/app/assets/stylesheets/active_admin/_header.scss */
 a.button:not(.disabled):hover, a:link.button:not(.disabled):hover, a:visited.button:not(.disabled):hover, input[type=submit]:not(.disabled):hover, input[type=button]:not(.disabled):hover, button:not(.disabled):hover {
-  background-color: #8b9297;
-  background-image: linear-gradient(180deg, #8b9297, #484d51);
+  color: black;
+  outline: 0;
+  background-position: 0;
 }
 
 /* line 33, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
@@ -2785,8 +2788,9 @@ a:hover {
 /* line 29, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
 /* line 1966, /Users/onclick/workspace/twice/app/assets/stylesheets/active_admin/_header.scss */
 .pagination span.page.current:not(.disabled):hover {
-  background-color: #8b9297;
-  background-image: linear-gradient(180deg, #8b9297, #484d51);
+  color: black;
+  outline: 0;
+  background-position: 0;
 }
 
 /* line 33, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
@@ -3986,8 +3990,9 @@ form input[type=submit].disabled, form input[type=button].disabled, form button.
 }
 /* line 29, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
 form input[type=submit]:not(.disabled):hover, form input[type=button]:not(.disabled):hover, form button:not(.disabled):hover {
-  background-color: #8b9297;
-  background-image: linear-gradient(180deg, #8b9297, #484d51);
+  color: black;
+  outline: 0;
+  background-position: 0;
 }
 /* line 33, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
 form input[type=submit]:not(.disabled):active, form input[type=button]:not(.disabled):active, form button:not(.disabled):active {
@@ -4660,8 +4665,9 @@ table.index_table td {
 }
 /* line 29, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
 .ui-dialog .ui-dialog-buttonpane button:not(.disabled):hover {
-  background-color: #8b9297;
-  background-image: linear-gradient(180deg, #8b9297, #484d51);
+  color: black;
+  outline: 0;
+  background-position: 0;
 }
 /* line 33, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
 .ui-dialog .ui-dialog-buttonpane button:not(.disabled):active {
@@ -5000,8 +5006,9 @@ a.button.disabled, a:link.button.disabled, a:visited.button.disabled, input[type
 }
 /* line 29, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
 a.button:not(.disabled):hover, a:link.button:not(.disabled):hover, a:visited.button:not(.disabled):hover, input[type=submit]:not(.disabled):hover, input[type=button]:not(.disabled):hover, button:not(.disabled):hover {
-  background-color: #8b9297;
-  background-image: linear-gradient(180deg, #8b9297, #484d51);
+  color: black;
+  outline: 0;
+  background-position: 0;
 }
 /* line 33, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
 a.button:not(.disabled):active, a:link.button:not(.disabled):active, a:visited.button:not(.disabled):active, input[type=submit]:not(.disabled):active, input[type=button]:not(.disabled):active, button:not(.disabled):active {
@@ -5124,8 +5131,9 @@ a:hover {
 }
 /* line 29, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
 .pagination span.page.current:not(.disabled):hover {
-  background-color: #8b9297;
-  background-image: linear-gradient(180deg, #8b9297, #484d51);
+  color: black;
+  outline: 0;
+  background-position: 0;
 }
 /* line 33, /Users/onclick/.rvm/gems/ruby-2.3.0/bundler/gems/activeadmin-a932d56b156e/app/assets/stylesheets/active_admin/mixins/_buttons.scss */
 .pagination span.page.current:not(.disabled):active {
@@ -5836,4 +5844,24 @@ body {
   font-size: 72%;
   background: #FFF;
   color: #323537;
+}
+form input[type=submit]:not(.disabled):hover, form input[type=button]:not(.disabled):hover, form button:not(.disabled):hover,
+form input[type=submit]:not(.disabled):focus, form input[type=button]:not(.disabled):focus, form button:not(.disabled):focus {
+  color: #fff;
+  outline: 0;
+  background-position: 0;
+}
+form input[type=submit]:not(.disabled):hover, form input[type=button]:not(.disabled):hover, form button:not(.disabled):hover {
+  color: #fff;
+  outline: 0;
+  background-position: 0;
+}
+form input[type=submit]:not(.disabled):active, form input[type=button]:not(.disabled):active, form button:not(.disabled):active {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) inset, 0 1px 0 0px #FFF;
+  background-color: transparent;
+  background-image: linear-gradient(180deg, transparent, transparent);
+}
+form input[type=submit]:not(.disabled):hover, form input[type=button]:not(.disabled):hover, form button:not(.disabled):hover {
+  background-color: transparent;
+  background-image: linear-gradient(180deg, transparent, transparent);
 }
