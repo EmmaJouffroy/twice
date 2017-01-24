@@ -45,8 +45,6 @@ Main Components
 	margin-top: -33px;
 	@include transition(opacity .2s);
 
-	display: flex;
-	flex-direction: column-reverse;
 
 	&::before {
 		/* never visible - this is used in jQuery to check the current MQ */
