@@ -1,5 +1,5 @@
 //Colours
-$green: #2ecc71;
+$green: #c5cfd5;
 $red: #e74c3c;
 $blue: #3498db;
 $yellow: #f1c40f;
@@ -8,6 +8,7 @@ $turquoise: #1abc9c;
 
 .article_form label{
   display: block;
+  padding-bottom: 10px;
 }
 .article_form h1{
   text-align: center;
@@ -29,16 +30,20 @@ form input[type=date],
 form textarea,
 #article_notion_ids{
   width: 50vw;
+  margin-bottom: 20px;
+}
+#article_notion_ids{
 }
 .article_form .back{
   margin-left: 10vw;
   margin-bottom: 10vw;
 }
 .article_form .button input{
+  width: 200px;
   box-sizing: border-box;
     appearance: none;
     background-color: transparent;
-    border: 2px solid $yellow;
+    border: 2px solid $green;
     border-radius: 0.6em;
     color: black;
     cursor: pointer;
@@ -54,9 +59,9 @@ form textarea,
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    border-color: #f1c40f;
-    background-image: -webkit-linear-gradient(45deg, #f1c40f 50%, transparent 50%);
-    background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+    border-color: #c5cfd5;
+    background-image: -webkit-linear-gradient(45deg, #c5cfd5 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #c5cfd5 50%, transparent 50%);
     background-position: 100%;
     background-size: 400%;
     -webkit-transition: background 300ms ease-in-out;
@@ -67,8 +72,8 @@ form input[type=submit]:not(.disabled):hover, form input[type=button]:not(.disab
 form input[type=submit]:not(.disabled):focus, form input[type=button]:not(.disabled):focus, form button:not(.disabled):focus{
   color: black;
   outline: 0;
-  border-color: $yellow;
-  background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+  border-color: #c5cfd5;
+  background-image: linear-gradient(45deg, #c5cfd5 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
   transition: background 300ms ease-in-out;
@@ -78,5 +83,5 @@ form input[type=submit]:not(.disabled):hover, form input[type=button]:not(.disab
   background-position: 0;
 }
 .article_form .button a{
-
+  text-shadow: 0px;
 }
