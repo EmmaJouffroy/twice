@@ -45,14 +45,18 @@
 
   				<h2 class="text-center titre_article"><%= article.titre %></h2>
 					<div class="middle"><%= image_tag article.photo %></div>
-  				<em><%= article.date %></em>
+  				<em><%= article.place %></em>
   				<p>
-  					<%= article.content %>
+  					<%= article.content.gsub("\n", "<br>").html_safe %>
   				</p>
+					<p>Notions liées à l'article : </p<
 					<p>
 						<% article.notions.each do |n| %>
-						<%= link_to n.name, notion_path(n.id)%>
-						<% end %>
+							<%= link_to n.name, notion_path(n.id)%>,
+								<% if admin_user_signed_in? %>
+									<%= link_to "edit article", edit_article_path %>
+									<% end %>
+								<% end %>
 					</p>
   			</li>
       <% end %>

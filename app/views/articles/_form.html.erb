@@ -7,6 +7,7 @@
     <%= f.file_field :photo %>
     <%= f.file_field :audio %>
     <%= f.file_field :video %>
+    <%= f.text_field :place %>
     <% notions_array = Notion.all.map { |notion| [notion.name, notion.id] } %>
     <%= f.select :notion_ids, options_for_select(notions_array), {}, {:multiple => true} %>
     <%= f.submit :submit %>
