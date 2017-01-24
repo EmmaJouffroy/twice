@@ -9,28 +9,31 @@ $turquoise: #1abc9c;
 .article_form label{
   display: block;
   padding-bottom: 10px;
+  padding-top: 20px;
 }
 .article_form h1{
   text-align: center;
 }
 .article_form textarea{
+  height: 80vh;
   margin: 1vh 0vw;
   padding: 0;
 }
 .article_form input[type="file"] {
   margin: 15px;
 }
-form input[type=text],
-form input[type=password],
-form input[type=email],
-form input[type=number],
-form input[type=url],
-form input[type=tel],
-form input[type=date],
-form textarea,
-#article_notion_ids{
-  width: 50vw;
-  margin-bottom: 20px;
+.article_form {
+  form input[type=text],
+  form input[type=password],
+  form input[type=email],
+  form input[type=number],
+  form input[type=url],
+  form input[type=tel],
+  form input[type=date],
+  form textarea,
+  #article_notion_ids{
+    width: 50vw;
+  }
 }
 #article_notion_ids{
 }
