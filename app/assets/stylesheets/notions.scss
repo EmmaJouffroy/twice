@@ -1,3 +1,7 @@
+//Colours
+
+$green: #c5cfd5;
+
 // Place all the styles related to the notions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
@@ -102,24 +106,43 @@ outline: 0 none;
 }
 .form-style-8 input[type="button"],
 .form-style-8 input[type="submit"]{
-    -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-    -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-    box-shadow: inset 0px 1px 0px 0px #45D6D6;
-    background-color: #477E79;
-    border: 1px solid #557B8A;
-    display: inline-block;
+  width: 200px;
+  box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid $green;
+    border-radius: 0.6em;
+    color: black;
     cursor: pointer;
-    color: #FFFFFF;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 14px;
-    padding: 8px 18px;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1em;
+    margin: 20px;
+    padding: 1.2em 2.8em;
     text-decoration: none;
+    text-align: center;
     text-transform: uppercase;
+    font-family: 'Avenir next', sans-serif;
+    border-color: #c5cfd5;
+    background-image: -webkit-linear-gradient(45deg, #c5cfd5 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #c5cfd5 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+
 }
 .form-style-8 input[type="button"]:hover,
 .form-style-8 input[type="submit"]:hover {
-    background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
-    background-color:#34CACA;
+  color: black;
+  outline: 0;
+  border-color: #c5cfd5;
+  background-image: linear-gradient(45deg, #c5cfd5 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background 300ms ease-in-out;
 }
 
 .notionTexte{
