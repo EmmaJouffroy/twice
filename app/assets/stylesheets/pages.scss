@@ -39,16 +39,17 @@ a:hover {
 .image_gauche img{
   display: block;
   float: left;
-  width: 350px;
-  height: 250px;
+  width: 100%;
+  max-width: 350px;
 }
 .image_droite img {
   display: block;
   float: right;
-  width: 313px;
-  height: 168px;
+  width: 100%;
+  max-width: 313px;
   margin-top: 87px;
 }
+
 .images {
   margin-top: 50px;
   width: 60%;
