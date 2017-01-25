@@ -1,0 +1,29 @@
+/*Page accueil*/
+@media screen and (max-width: 640px) {
+  .home #big_logo {
+    width: 250px;
+  }
+  .home .drapeaux {
+    width: 100vw;
+  }
+  .home #spain,
+  .home #france,
+  .home #uk{
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .home #arrows{
+    width: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+/*Page accueil*/
+@media screen and (max-width: 640px) {
+  .choice #texte_2{
+    margin-top: 20px;
+  }
+  .choice .images img{
+    margin-top: 100px;
+  }
+}
