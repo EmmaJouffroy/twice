@@ -7,25 +7,24 @@
   repeat: no-repeat;
   background-size: cover;
 
-    -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-    -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
-    box-shadow: inset 0px 1px 0px 0px #45D6D6;
 
   h2 {
     margin-top: 0 ;
     color: #ffffff;
     letter-spacing: 0.3em;
-    font-family: "Avenir"
+    font-family: "Avenir next";
+    display: block;
+    padding-top: 90px;
+
   }
   h1{
     margin-left: 25px;
-    font-size: 70px;
-    padding-top: 10px;
+    font-size: 1px;
+    float: left;
   }
-  .search {
-    text-align: right;
-    margin-right: 15px;
-    padding-top: 0px;
+
+  a {
+    width : 115px;
   }
 
 }
