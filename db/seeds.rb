@@ -6,15 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # encoding: utf-8
-AdminUser.create(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
-AdminUser.create(email: 'emmajouffroypro@gmail.com', password: 'emmajou', password_confirmation: 'emmajou')
-AdminUser.create(email: 'noemilamane2@gmail.com', password: 'noemil', password_confirmation: 'noemil')
-AdminUser.create(email: 'eliemargoet@gmail.com', password: 'eliema', password_confirmation: 'eliema')
-AdminUser.create(email: 'fleurgriffon@gmail.com', password: 'fleurg', password_confirmation: 'fleurg')
-AdminUser.create(email: 'florianlaville33@gmail.com', password: 'florian', password_confirmation: 'florian')
-AdminUser.create(email: 'margauxdelafontaine@gmail.com', password: 'margaux', password_confirmation: 'margaux')
-AdminUser.create(email: 'swann.latasa@gmail.com', password: 'swannl', password_confirmation: 'swannl')
-AdminUser.create(email: 'lafon_aurelien@orange.fr', password: 'aurelien', password_confirmation: 'aurelien')
+
+# AdminUser.create(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+# AdminUser.create(email: 'emmajouffroypro@gmail.com', password: 'emmajou', password_confirmation: 'emmajou')
+# AdminUser.create(email: 'noemilamane2@gmail.com', password: 'noemil', password_confirmation: 'noemil')
+# AdminUser.create(email: 'eliemargoet@gmail.com', password: 'eliema', password_confirmation: 'eliema')
+# AdminUser.create(email: 'fleurgriffon@gmail.com', password: 'fleurg', password_confirmation: 'fleurg')
+# AdminUser.create(email: 'florianlaville33@gmail.com', password: 'florian', password_confirmation: 'florian')
+# AdminUser.create(email: 'margauxdelafontaine@gmail.com', password: 'margaux', password_confirmation: 'margaux')
+# AdminUser.create(email: 'swann.latasa@gmail.com', password: 'swannl', password_confirmation: 'swannl')
+# AdminUser.create(email: 'lafon_aurelien@orange.fr', password: 'aurelien', password_confirmation: 'aurelien')
 
 
 
