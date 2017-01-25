@@ -4,29 +4,31 @@
 
   <div class="container choice">
       <div class="row">
-          <div class="text-center">
-              <p id="suivreHistoire">Comprendre l'histoire du numérique</p>
-          </div>
-          <section class="images">
+          <section class="images rectangle">
             <div class="img_texte_gauche">
           <div class="image_gauche">
-            <%=link_to (image_tag("suivrehistoire.jpg", alt: "suivre l'histoire")), article_url(id: 1) %>
+            <%=link_to (image_tag("suivrehistoire.png", alt: "suivre l'histoire")), article_url(id: 1) %>
           </div>
           <div>
-            <p class="texte">Quae dum ita struuntur, indicatum est apud Tyrum indumentum regale textum occulte,
+            <div class="texte" id="texte_1">
+              <h2>Suivre l'histoire</h2><p>Quae dum ita struuntur, indicatum est apud Tyrum indumentum regale textum occulte,
               incertum quo locante vel cuius usibus apparatum. ideoque rector provinciae tunc pater
               Apollinaris eiusdem nominis ut conscius ductus est aliique congregati sunt ex diversis civitatibus multi,
               qui atrocium criminum ponderibus urgebantur.</p>
+            </div>
           </div>
         </div>
           <div class="image_droite">
-            <%=link_to (image_tag("choisirnotion.jpg", alt: "choisir une notion")), notions_path %>
+            <%=link_to (image_tag("choisirnotion.png", alt: "choisir une notion")), notions_path %>
           </div>
           <div>
-            <p class="texte">Quae dum ita struuntur, indicatum est apud Tyrum indumentum regale textum occulte,
+            <div class="texte" id="texte_2">
+              <h2>Choisir une notion</h2>
+                <p>Quae dum ita struuntur, indicatum est apud Tyrum indumentum regale textum occulte,
               incertum quo locante vel cuius usibus apparatum. ideoque rector provinciae tunc pater
               Apollinaris eiusdem nominis ut conscius ductus est aliique congregati sunt ex diversis civitatibus multi,
               qui atrocium criminum ponderibus urgebantur.</p>
+            </div>
           </div>
         </section>
       </div>
