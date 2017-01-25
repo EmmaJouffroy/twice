@@ -1,22 +1,22 @@
-<%= form_for(@article) do |f| %>
-    <%= f.label :titre %>
-    <%= f.text_field :titre %>
-    <%= f.label :date, 'Date sur timeline' %>
-    <%= f.date_field :date %>
-    <%= f.label :content, "Contenu de l'article" %>
-    <%= f.text_area :content %>
-    <%= f.label :place, "Ajoutez le lieu et la date de votre article (lieu - année)" %>
-    <%= f.text_field :place %>
-    <%= f.label :notion_ids, "Ajoutez la notion abordée par votre article (clic + cmd pour ajouter plusieurs)" %>
-    <% notions_array = Notion.all.map { |notion| [notion.name, notion.id] } %>
-    <%= f.select :notion_ids, options_for_select(notions_array), {}, {:multiple => true} %>
-    <%= f.label :photo, "Ajoutez votre photo" %>
-    <%= f.file_field :photo %>
-    <%= f.label :audio, "Ajoutez votre audio" %>
-    <%= f.file_field :audio %>
-    <%= f.label :video, "Ajoutez votre video" %>
-    <%= f.file_field :video %>
-    <div class='button green'>
-    <%= f.submit :submit %>
-    </div>
-<% end %>
+  <%= form_for(@article) do |f| %>
+      <%= f.label :titre %>
+      <%= f.text_field :titre %>
+      <%= f.label :date, 'Date sur timeline' %>
+      <%= f.date_field :date %>
+      <%= f.label :content, "Contenu de l'article" %>
+      <%= f.text_area :content %>
+      <%= f.label :place, "Ajoutez le lieu et la date de votre article (lieu - année)" %>
+      <%= f.text_field :place %>
+      <%= f.label :notion_ids, "Ajoutez la notion abordée par votre article (clic + cmd pour ajouter plusieurs)" %>
+      <% notions_array = Notion.all.map { |notion| [notion.name, notion.id] } %>
+      <%= f.select :notion_ids, options_for_select(notions_array), {}, {:multiple => true} %>
+      <%= f.label :photo, "Ajoutez votre photo" %>
+      <%= f.file_field :photo %>
+      <%= f.label :audio, "Ajoutez votre audio" %>
+      <%= f.file_field :audio %>
+      <%= f.label :video, "Ajoutez votre video" %>
+      <%= f.file_field :video %>
+        <div class='button green'>
+            <%= f.submit :submit %>
+        </div>
+  <% end %>

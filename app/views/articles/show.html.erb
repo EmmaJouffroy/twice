@@ -57,9 +57,11 @@
 					</p>
   			</li>
       <% end %>
-				<%= link_to "edit article", edit_article_path %>
 		</ol>
 	</div> <!-- .events-content -->
 </section>
 
+<% if admin_user_signed_in? %>
+<%= link_to "edit article", edit_article_path %>
+<% end %>
 <%= render 'layouts/footer'%>
