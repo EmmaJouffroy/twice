@@ -4,7 +4,7 @@ var search = {
     if (query == ""){
       for(var i=0; i<this.notions.length; i++){
         var notion = this.notions[i];
-        notion.style.display = "inline";
+        notion.style.display = "inline-block";
       }
     }
     else {
@@ -15,7 +15,7 @@ var search = {
         var notion = this.notions[i];
         console.log(pattern);
         if (notion.getAttribute("data-name").match(pattern)){
-          notion.style.display = "inline";
+          notion.style.display = "inline-block";
         }
         else {
           notion.style.display = "none";

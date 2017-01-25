@@ -3,5 +3,6 @@ class PagesController < ApplicationController
   end
 
   def choice
+    @article = Article.order(date: :asc).limit(1)[0]
   end
 end
