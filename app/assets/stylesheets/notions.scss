@@ -6,9 +6,10 @@ $green: #c5cfd5;
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .notions {
+  text-align: center;
+  margin: 10px auto;
   .row {
     font-size: 0;
-    text-align: left;
     a {
       width: 300px;
       height: 300px;
@@ -130,9 +131,9 @@ ul{
 
 input:focus
 {
-  border-color: rgba(114, 155, 151, 1);
-box-shadow: 0 2px 2px rgba(114, 155, 151, 1) inset, 0 0 20px rgba(114, 155, 151, 1);
-outline: 0 none;
+  border-color: grey;
+  box-shadow: 0 2px 2px grey inset, 0 0 20px black;
+  outline: 0 none;
 }
 
 
@@ -221,4 +222,10 @@ outline: 0 none;
 .notionTexte{
   font-family: "Avenir next";
   font-weight: lighter;
+}
+
+input[type="search"]{
+    border-radius: 0.6em;
+    width: 200px;
+    height: 40px;
 }
