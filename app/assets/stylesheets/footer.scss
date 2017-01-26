@@ -23,4 +23,19 @@ footer {
   a:hover {
     color: #C0C0C0;
   }
+  ol {
+    list-style: none;
+    float: left;
+  }
+  li {
+    display: inline-block;
+    margin: 10px;
+  }
+  img{
+    max-width: 20px;
+  }
+
+  .sociaux {
+    float: left;
+  }
 }
