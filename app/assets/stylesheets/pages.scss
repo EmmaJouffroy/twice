@@ -34,49 +34,42 @@ a:hover {
 }
 
 .choice {
-
-
-.image_gauche img{
-  display: block;
-  float: left;
-  width: 100%;
-  max-width: 350px;
-}
-.image_droite img {
-  display: block;
-  float: right;
-  width: 100%;
-  max-width: 313px;
-  margin-top: 87px;
-  margin-left: 120px;
-}
-
-.images {
-  margin-top: 50px;
-  width: 60%;
-  margin-left: 20%;
-}
-
-.images img:hover{
-  opacity: .5;
-}
-
-
-.img_texte {
-  display: block;
-  margin-top: 50px;
-  display: flex;
-  &::after {
-    content:"";
+  .image_gauche img{
     display: block;
-    clear: both;
+    float: left;
+    width: 100%;
+    max-width: 350px;
   }
-  .image, .content {
-    flex: 1;
+  .image_droite img {
+    display: block;
+    float: right;
+    width: 100%;
+    max-width: 313px;
+    margin-top: 87px;
+    margin-left: 120px;
   }
-}
-
-
+  .images {
+    margin-top: 50px;
+    width: 60%;
+    margin-left: 20%;
+  }
+  .images img:hover{
+    opacity: .5;
+  }
+  .img_texte {
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    &::after {
+      content:"";
+      display: block;
+      clear: both;
+    }
+    .image, .content {
+      flex: 1;
+    }
+  }
 
 .texte {
   display: block;
