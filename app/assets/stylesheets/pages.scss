@@ -48,6 +48,7 @@ a:hover {
   width: 100%;
   max-width: 313px;
   margin-top: 87px;
+  margin-left: 120px;
 }
 
 .images {
@@ -59,22 +60,30 @@ a:hover {
 .images img:hover{
   opacity: .5;
 }
-.img_texte_gauche {
-  border: 6px, solid, black;
+
+
+.img_texte {
+  display: block;
+  margin-top: 50px;
+  display: flex;
+  &::after {
+    content:"";
+    display: block;
+    clear: both;
+  }
+  .image, .content {
+    flex: 1;
+  }
 }
+
+
+
 .texte {
   display: block;
   max-width: 340px;
   background-color: #ffffff;
 }
-#texte_1 {
-  float: right;
-}
 
-#texte_2 {
-  float: left;
-  margin-top: 65px;
-}
 h2 {
   margin-top: 12px;
   font-family: "avenir next"
