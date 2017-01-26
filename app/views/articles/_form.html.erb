@@ -12,6 +12,8 @@
       <%= f.select :notion_ids, options_for_select(notions_array), {}, {:multiple => true} %>
       <%= f.label :photo, "Ajoutez votre photo" %>
       <%= f.file_field :photo %>
+      <%= f.label :legende, "Ajoutez la légende de votre photo" %>
+      <%= f.text_field :legende %>
       <%= f.label :audio, "Ajoutez votre audio" %>
       <%= f.file_field :audio %>
       <%= f.label :video, "Ajoutez votre video" %>
