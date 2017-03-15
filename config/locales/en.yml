@@ -11,7 +11,7 @@
 #     <%= t('hello') %>
 #
 # To use a different locale, set it with `I18n.locale`:
-#
+#quand on clique sur un drapeau, il faut rediriger vers autre chose ou routes sur twice si je veux tout un groupe de texte je 
 #     I18n.locale = :es
 #
 # This would use the information in config/locales/es.yml.

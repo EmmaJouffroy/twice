@@ -35,22 +35,9 @@ a:hover {
 
 .choice {
 
-
-.image_gauche img{
-  display: block;
-  float: left;
-  width: 100%;
-  max-width: 350px;
+.row {
+  margin-bottom: 70px;
 }
-.image_droite img {
-  display: block;
-  float: right;
-  width: 100%;
-  max-width: 313px;
-  margin-top: 87px;
-  margin-left: 120px;
-}
-
 .images {
   margin-top: 50px;
   width: 60%;
@@ -61,6 +48,13 @@ a:hover {
   opacity: .5;
 }
 
+.image_carte  a img {
+  width: 60%;
+}
+
+.image_carte {
+  width: 70%;
+}
 
 .img_texte {
   display: block;
@@ -73,6 +67,9 @@ a:hover {
   }
   .image, .content {
     flex: 1;
+  }
+  .image a img {
+    width: 90%;
   }
 }
 .texte {
