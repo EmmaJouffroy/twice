@@ -56,12 +56,11 @@
 							<%= link_to n.name, notion_path(n.id)%>,
 								<% end %>
 					</p>
+					<% if admin_user_signed_in? %>
+						<%= link_to "edit article", edit_article_path(article) %>
+					<% end %>
   			</li>
       <% end %>
 		</ol>
 	</div> <!-- .events-content -->
 </section>
-
-<% if admin_user_signed_in? %>
-<%= link_to "edit article", edit_article_path %>
-<% end %>

@@ -7,10 +7,10 @@ Rails.application.routes.draw do
   post "comment/new/:id" => "comment#create", as: :create_comment
 
   get 'pages/home'
-
   get 'pages/choice'
-
   get 'pages/ensavoirplus'
+
+  get 'map' => "application#showMap", as: :map_show
 
   get 'home/choice'
   get 'home/choise/notions'

@@ -36,6 +36,7 @@ class Article < ApplicationRecord
   validates_attachment_content_type :audio, content_type: /^audio\/.+/i
   validates_attachment_content_type :video, content_type: /^video\/.+/i
 
-
+  geocoded_by :placename
+  after_validation :geocode
 
 end

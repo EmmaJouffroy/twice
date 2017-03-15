@@ -1,0 +1,256 @@
+<%= render 'layouts/header'%>
+<div class="fluid-container">
+  <div class="row">
+
+    <div class="col-md-10 col-md-offset-1">
+      <div id="map"></div>
+
+    </div>
+</div>
+
+
+<script>
+var articles = <%= @articles.all.map{|a|{path:article_path(a),position:{lat:a.latitude, lng: a.longitude}, title:a.titre}}.to_json.html_safe %>;
+var map, mapOptions;
+
+function initMap(){
+  var styles = [
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#000000"
+            },
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": -100
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#000000"
+            },
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": -100
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#000000"
+            },
+            {
+                "saturation": 0
+            },
+            {
+                "lightness": -100
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "hue": "#ffffff"
+            },
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 100
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "hue": "#000000"
+            },
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": -100
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "all",
+        "stylers": [
+            {
+                "hue": "#ffffff"
+            },
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 100
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "hue": "#ffffff"
+            },
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 100
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "hue": "#000000"
+            },
+            {
+                "saturation": 0
+            },
+            {
+                "lightness": -100
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "hue": "#000000"
+            },
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": -100
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "hue": "#bbbbbb"
+            },
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 26
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "hue": "#dddddd"
+            },
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": -3
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    }
+  ]
+  // Create a new StyledMapType object, passing it the array of styles,
+  // as well as the name to be displayed on the map type control.
+  var styledMap = new google.maps.StyledMapType(styles, {name: "map_style"});
+  // Create a map object and specify the DOM element for display.
+
+  mapOptions = {
+  zoom: 2,
+  center: new google.maps.LatLng(0, 0),
+  scrollwheel: false,
+  mapTypeControlOptions: {
+    mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+  }
+  };
+  map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+  map.mapTypes.set('map_style', styledMap);
+  map.setMapTypeId('map_style');
+  for(var i=0; i<articles.length; i++) {
+    var article = articles[i];
+    if(article.position.lat !== null && article.position.lng !== null){
+      var marker = new google.maps.Marker({
+        position: article.position,
+        map: map,
+        title: article.title,
+        icon: "/marker.png"
+      });
+      marker.addListener('click',(function(article){
+        return function(){
+          window.location.href = article.path;
+        };
+      })(article));
+    }
+
+  }
+
+}
+
+  //Associate the styled map with the MapTypeId and set it to display.
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC9g-0QYUlFJAlEbMJJwC_KflEQz8DBz8&callback=initMap" async defer></script>
