@@ -4,6 +4,15 @@ $(document).ready(function($){
 
 	(timelines.length > 0) && initTimeline(timelines);
 
+	function setSlideByHash() {
+		if(window.location.hash.length > 1) {
+			var element = document.querySelector(window.location.hash);
+			if(element) {
+				if(!element.className.match(/\bselected\b/)) element.click();
+			}
+		}
+	};
+
 	function initTimeline(timelines) {
 		timelines.each(function(){
 			var timeline = $(this),
@@ -64,6 +73,10 @@ $(document).ready(function($){
 				}
 			});
 		});
+
+		setSlideByHash()
+
+		window.addEventListener('hashchange', setSlideByHash);
 	}
 
 	function updateSlide(timelineComponents, timelineTotWidth, string) {

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170315144239) do
+ActiveRecord::Schema.define(version: 20170315154115) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -88,6 +88,14 @@ ActiveRecord::Schema.define(version: 20170315144239) do
     t.index ["notion_id"], name: "index_comments_on_notion_id", using: :btree
   end
 
+  create_table "logs", force: :cascade do |t|
+    t.integer  "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text     "content"
+    t.index ["article_id"], name: "index_logs_on_article_id", using: :btree
+  end
+
   create_table "notions", force: :cascade do |t|
     t.string   "name"
     t.string   "photo_file_name"
@@ -99,4 +107,5 @@ ActiveRecord::Schema.define(version: 20170315144239) do
   end
 
   add_foreign_key "comments", "notions"
+  add_foreign_key "logs", "articles"
 end

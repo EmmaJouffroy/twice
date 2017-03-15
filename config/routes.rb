@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   get 'map' => "application#showMap", as: :map_show
 
+  get 'log/:id' => "logs#show", as: :log
+
   get 'home/choice'
   get 'home/choise/notions'
   root :to => "pages#home"

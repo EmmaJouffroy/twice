@@ -15,7 +15,7 @@
 							className = ""
 						end %>
 
-						<li><%= link_to article.date.year, article, data: { date: '1/1/'+(i+1900).to_s}, class: className %></li>
+						<li><%= link_to article.date.year, article, data: { date: '1/1/'+(i+1900).to_s}, class: className, id: 'a'+article.id.to_s %></li>
 					<% end %>
 				</ol>
 
@@ -50,7 +50,18 @@
   				<p>
   					<%= article.content.gsub("\n", "<br>").html_safe %>
   				</p></br></hr>
-					<p>Notions liées à l'article : </p<
+					<details>
+						<summary>
+						Consulter les Archives de l'article
+						</summary>
+						<table>
+							<tr><td><%= link_to 'Version actuelle', article_path(article)+'#a'+@article.id.to_s %></td></tr>
+							<% article.logs.each do |log| %>
+							<tr><td> <%= link_to log.created_at, log_path(log)+'#a'+log.article.id.to_s %> </td></tr>
+							<% end %>
+						</table>
+					</details>
+					<p>Notions liées à l'article : </p>
 					<p>
 						<% article.notions.each do |n| %>
 							<%= link_to n.name, notion_path(n.id)%>,

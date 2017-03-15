@@ -24,6 +24,7 @@
 
 class Article < ApplicationRecord
   has_and_belongs_to_many :notions
+  has_many :logs
 
   validates :titre,  presence: true
   validates :content,  presence: true
@@ -38,5 +39,15 @@ class Article < ApplicationRecord
 
   geocoded_by :placename
   after_validation :geocode
+  before_update :log, if: :content_changed?
+
+  def logs
+      Log.where(article_id: self.id).order(created_at: :desc)
+  end
+
+  private
+  def log
+    Log.create article:self, content:self.content
+  end
 
 end
