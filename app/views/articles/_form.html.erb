@@ -3,6 +3,8 @@
       <%= f.text_field :titre %>
       <%= f.label :date, 'Date sur timeline' %>
       <%= f.date_field :date %>
+      <%= f.label :placename, "Ajoutez le lieu où votre article sera présent sur la carte" %>
+      <%= f.text_field :placename %>
       <%= f.label :content, "Contenu de l'article" %>
       <%= f.text_area :content %>
       <%= f.label :place, "Ajoutez le lieu et la date de votre article (lieu - année)" %>
@@ -18,8 +20,7 @@
       <%= f.file_field :audio %>
       <%= f.label :video, "Ajoutez votre video" %>
       <%= f.file_field :video %>
-      <%= f.label :placename, "Ajoutez le lieu où votre article sera présent sur la carte" %>
-      <%= f.text_field :placename %>
+
         <div class='button green'>
             <%= f.submit :submit %>
         </div>

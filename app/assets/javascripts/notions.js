@@ -10,7 +10,6 @@ var search = {
     else {
       var name = removeDiacritics(query).replace(/[^\w\s]/i,".", "i");
       var pattern = new RegExp(name);
-      console.log(name);
       for(var i=0; i<this.notions.length; i++){
         var notion = this.notions[i];
         console.log(pattern);
@@ -21,6 +20,7 @@ var search = {
           notion.style.display = "none";
         }
       }
+      console.log(this.notions);
     }
   }
 }
