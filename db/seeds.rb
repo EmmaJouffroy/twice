@@ -16,6 +16,14 @@
  AdminUser.create(email: 'margauxdelafontaine@gmail.com', password: 'margaux', password_confirmation: 'margaux')
  AdminUser.create(email: 'swann.latasa@gmail.com', password: 'swannl', password_confirmation: 'swannl')
  AdminUser.create(email: 'lafon_aurelien@orange.fr', password: 'aurelien', password_confirmation: 'aurelien')
+ AdminUser.create(email: 'galaweshheil@gmail.com', password: 'galawe', password_confirmation: 'galawe')
+ AdminUser.create(email: 'yann.le.roux49@gmail.com', password: 'yannle', password_confirmation: 'yannle')
+ AdminUser.create(email: 'ineslebuhan@gmail.com', password: 'inesle', password_confirmation: 'inesle')
+ AdminUser.create(email: 'elisamauger01@gmail.com', password: 'elisam', password_confirmation: 'elisam')
+ AdminUser.create(email: 'davidlaures33@gmail.com', password: 'davidl', password_confirmation: 'davidl')
+ AdminUser.create(email: 'thomas.hawkins.r@gmail.com', password: 'thomas', password_confirmation: 'thomas')
+ AdminUser.create(email: 'mr.heyben@gmail.com', password: 'benjamin', password_confirmation: 'benjamin')
+
 
 
 
