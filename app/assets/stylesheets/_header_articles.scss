@@ -3,9 +3,16 @@
   height: 150px;
   background-position: center center;
   background-size: cover;
+  padding-left: 25px;
 
-  a {
-    text-decoration: none;
-    width: 10%;
-  }
+    a {
+      text-decoration: none;
+      width: 10%;
+    }
+
+    h1{
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
 }

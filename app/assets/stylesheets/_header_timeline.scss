@@ -18,13 +18,15 @@
 
   }
   h1{
-    margin-left: 25px;
+    position: absolute;
     font-size: 1px;
     float: left;
+    margin-top: 0;
+    padding: 40px 0 20px 25px;
   }
 
   a {
-    width : 115px;
+    width : 125px;
   }
 
 }
