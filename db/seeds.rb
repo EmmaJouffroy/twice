@@ -7,121 +7,152 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # encoding: utf-8
 
- AdminUser.create(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
- AdminUser.create(email: 'emmajouffroypro@gmail.com', password: 'emmajou', password_confirmation: 'emmajou')
- AdminUser.create(email: 'noemilamane2@gmail.com', password: 'noemil', password_confirmation: 'noemil')
- AdminUser.create(email: 'eliemargoet@gmail.com', password: 'eliema', password_confirmation: 'eliema')
- AdminUser.create(email: 'fleurgriffon@gmail.com', password: 'fleurg', password_confirmation: 'fleurg')
- AdminUser.create(email: 'florianlaville33@gmail.com', password: 'florian', password_confirmation: 'florian')
- AdminUser.create(email: 'margauxdelafontaine@gmail.com', password: 'margaux', password_confirmation: 'margaux')
- AdminUser.create(email: 'swann.latasa@gmail.com', password: 'swannl', password_confirmation: 'swannl')
- AdminUser.create(email: 'lafon_aurelien@orange.fr', password: 'aurelien', password_confirmation: 'aurelien')
- AdminUser.create(email: 'galaweshheil@gmail.com', password: 'galawe', password_confirmation: 'galawe')
- AdminUser.create(email: 'yann.le.roux49@gmail.com', password: 'yannle', password_confirmation: 'yannle')
- AdminUser.create(email: 'ineslebuhan@gmail.com', password: 'inesle', password_confirmation: 'inesle')
- AdminUser.create(email: 'elisamauger01@gmail.com', password: 'elisam', password_confirmation: 'elisam')
- AdminUser.create(email: 'davidlaures33@gmail.com', password: 'davidl', password_confirmation: 'davidl')
- AdminUser.create(email: 'thomas.hawkins.r@gmail.com', password: 'thomas', password_confirmation: 'thomas')
- AdminUser.create(email: 'mr.heyben@gmail.com', password: 'benjamin', password_confirmation: 'benjamin')
+puts "Creating users"
+AdminUser.create(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+AdminUser.create(email: 'emmajouffroypro@gmail.com', password: 'emmajou', password_confirmation: 'emmajou')
+AdminUser.create(email: 'noemilamane2@gmail.com', password: 'noemil', password_confirmation: 'noemil')
+AdminUser.create(email: 'eliemargoet@gmail.com', password: 'eliema', password_confirmation: 'eliema')
+AdminUser.create(email: 'fleurgriffon@gmail.com', password: 'fleurg', password_confirmation: 'fleurg')
+AdminUser.create(email: 'florianlaville33@gmail.com', password: 'florian', password_confirmation: 'florian')
+AdminUser.create(email: 'margauxdelafontaine@gmail.com', password: 'margaux', password_confirmation: 'margaux')
+AdminUser.create(email: 'swann.latasa@gmail.com', password: 'swannl', password_confirmation: 'swannl')
+AdminUser.create(email: 'lafon_aurelien@orange.fr', password: 'aurelien', password_confirmation: 'aurelien')
+AdminUser.create(email: 'galaweshheil@gmail.com', password: 'galawe', password_confirmation: 'galawe')
+AdminUser.create(email: 'yann.le.roux49@gmail.com', password: 'yannle', password_confirmation: 'yannle')
+AdminUser.create(email: 'ineslebuhan@gmail.com', password: 'inesle', password_confirmation: 'inesle')
+AdminUser.create(email: 'elisamauger01@gmail.com', password: 'elisam', password_confirmation: 'elisam')
+AdminUser.create(email: 'davidlaures33@gmail.com', password: 'davidl', password_confirmation: 'davidl')
+AdminUser.create(email: 'thomas.hawkins.r@gmail.com', password: 'thomas', password_confirmation: 'thomas')
+AdminUser.create(email: 'mr.heyben@gmail.com', password: 'benjamin', password_confirmation: 'benjamin')
+puts "\e[32mUsers created\e[0m"
+
+puts ''
+
+notions = {
+	"La vie" => "vie",
+	"L'âge" => "age",
+	"La mort" => "mort",
+	"L'alimentation" => "alimentation",
+	"L'aliment" => "aliment",
+	"Le jeu" => "jeu",
+	"Le sport" => "sport",
+	"Le commerce" => "commerce",
+	"L'argent" => "argent",
+	"L'économie" => "economie",
+	"L'entreprise" => "entreprise",
+	"La possession" => "possession",
+	"La communication" => "communication",
+	"Le langage" => "langage",
+	"L'écriture" => "ecriture",
+	"informer" => "informer",
+	"La télécommunication" => "telecommunication",
+	"L'internet" => "internet",
+	"Le nom" => "nom",
+	"Le mouvement" => "mouvement",
+	"Le déplacement" => "deplacement",
+	"Le transport" => "transport",
+	"Le bateau" => "bateau",
+	"L'automobile" => "automobile",
+	"Le train" => "train",
+	"L'avion" => "avion",
+	"Les deux-roues" => "deuxroues",
+	"Le corps" => "corps",
+	"L'organe" => "organe",
+	"La santé" => "sante",
+	"L'hygiène" => "hygiene",
+	"Le sommeil" => "sommeil",
+	"La position" => "position",
+	"La sexualité" => "sexualite",
+	"La technique" => "technique",
+	"L'instrument" => "instrument",
+	"L'ordinateurs" => "ordinateur",
+	"L'animal" => "animaux",
+	"L'invertébré" => "invertebres",
+	"Le vertébré" => "vertebre",
+	"La plante" => "plante",
+	"Le pouvoir" => "pouvoir",
+	"La politique" => "politique",
+	"Le pays" => "pays",
+	"La justice" => "justice",
+	"La sécurité" => "securite",
+	"Le militaire" => "militaire",
+	"La famille" => "famille",
+	"Le mariage" => "mariage",
+	"La matière" => "matiere",
+	"L'atome" => "atome",
+	"Le déchet" => "dechet",
+	"Le feu" => "feu",
+	"L'eau" => "eau",
+	"La force" => "force",
+	"L'edifice" => "edifice",
+	"La ville" => "ville",
+	"La voie" => "voie",
+	"L'espace" => "espace",
+	"L'orientation" => "orientation",
+	"La distance" => "distance",
+	"L'univers" => "univers",
+	"La Terre" => "terre",
+	"La mer" => "mer",
+	"Le continent" => "continent",
+	"Le climat" => "climat",
+	"La saison" => "saison",
+	"Le temps" => "temps",
+	"La date-Calendrier" => "calendrier",
+	"Le fait" => "fait",
+	"L'intellect" => "intellect",
+	"Le savoir" => "savoir",
+	"L'apprentissage" => "apprentissage",
+	"Le sens" => "sens",
+	"Oui-Non" => "ouinon",
+	"La verité" => "verite",
+	"La société" => "societe",
+	"La fête" => "fete",
+	"L'esprit" => "esprit",
+	"La religion" => "religion",
+	"Le nombre" => "nom",
+	"La mesure" => "mesure",
+	"La dimension" => "dimension",
+	"Le sentiment" => "sentiment",
+	"La salutation" => "salutation",
+	"Faire" => "faire",
+	"La finalité" => "finalite",
+	"Le travail" => "travail",
+	"L'agriculture" => "agriculture",
+	"L'industrie" => "industrie",
+	"La vision" => "vision",
+	"L'audition" => "audition",
+	"Le toucher" => "toucher",
+	"L'être humain" => "etrehumain",
+	"Soi" => "soi",
+	"L'objet" => "objets",
+	"Le textile" => "textile",
+	"L'art" => "art"
+}
+
+length = notions.values.length.to_f
+puts "Creating notions"
+notions = notions.map.with_index do |(name, photo), n|
+	print "\r      \r#{((n.to_f/length)*10000).round.to_f/100}%"
+	Notion.create name: name, photo: File.new("#{__dir__}/files/notions/#{photo}.jpg")
+end
+puts "\r       \r\e[32mNotions created\e[0m"
+
+puts ''
 
 
 
+puts "Creating a sample article"
+Article.create(titre: 'Lorem ipsum dolor sit amet', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam quia veritatis, accusamus fugit ab excepturi, ducimus doloremque non dignissimos sunt nulla consectetur quisquam deserunt repudiandae consequuntur eos, ipsam tenetur consequatur.', date: Date.new, notions: [notions.first])
+puts "\e[32mArticle created\e[0m"
 
-not1 = Notion.create(name:"La vie", :photo => File.new(__dir__+"/files/notions/vie.jpg"))
-not2 = Notion.create(name:"L'âge", :photo => File.new(__dir__+"/files/notions/age.jpg"))
-not3 = Notion.create(name:"La mort", :photo => File.new(__dir__+"/files/notions/mort.jpg"))
-not4 = Notion.create(name:"L'alimentation", :photo => File.new(__dir__+"/files/notions/alimentation.jpg"))
-not5 = Notion.create(name:"L'aliment", :photo => File.new(__dir__+"/files/notions/aliment.jpg"))
-not6 = Notion.create(name:"Le jeu", :photo => File.new(__dir__+"/files/notions/jeu.jpg"))
-not7 = Notion.create(name:"Le sport", :photo => File.new(__dir__+"/files/notions/sport.jpg"))
-not8 = Notion.create(name:"Le commerce", :photo => File.new(__dir__+"/files/notions/commerce.jpg"))
-not9 = Notion.create(name:"L'argent", :photo => File.new(__dir__+"/files/notions/argent.jpg"))
-not10 = Notion.create(name:"L'économie", :photo => File.new(__dir__+"/files/notions/economie.jpg"))
-not11 = Notion.create(name:"L'entreprise", :photo => File.new(__dir__+"/files/notions/entreprise.jpg"))
-not12 = Notion.create(name:"La possession", :photo => File.new(__dir__+"/files/notions/possession.jpg"))
-not13 = Notion.create(name:"La communication", :photo => File.new(__dir__+"/files/notions/communication.jpg"))
-not14 = Notion.create(name:"Le langage", :photo =>  File.new(__dir__+"/files/notions/langage.jpg"))
-not15 = Notion.create(name:"L'écriture", :photo => File.new(__dir__+"/files/notions/ecriture.jpg"))
-not16 = Notion.create(name:"informer", :photo => File.new(__dir__+"/files/notions/informer.jpg"))
-not17 = Notion.create(name:"La télécommunication", :photo => File.new(__dir__+"/files/notions/telecommunication.jpg"))
-not18 = Notion.create(name:"L'internet", :photo => File.new(__dir__+"/files/notions/internet.jpg"))
-not19 = Notion.create(name:"Le nom", :photo => File.new(__dir__+"/files/notions/nom.jpg"))
-not20 = Notion.create(name:"Le mouvement", :photo => File.new(__dir__+"/files/notions/mouvement.jpg"))
-not21 = Notion.create(name:"Le déplacement", :photo => File.new(__dir__+"/files/notions/deplacement.jpg"))
-not22 = Notion.create(name:"Le transport", :photo => File.new(__dir__+"/files/notions/transport.jpg"))
-not23 = Notion.create(name:"Le bateau", :photo => File.new(__dir__+"/files/notions/bateau.jpg"))
-not24 = Notion.create(name:"L'automobile", :photo => File.new(__dir__+"/files/notions/automobile.jpg"))
-not25 = Notion.create(name:"Le train", :photo => File.new(__dir__+"/files/notions/train.jpg"))
-not26 = Notion.create(name:"L'avion", :photo => File.new(__dir__+"/files/notions/avion.jpg"))
-not27 = Notion.create(name:"Les deux-roues", :photo => File.new(__dir__+"/files/notions/deuxroues.jpg"))
-not28 = Notion.create(name:"Le corps", :photo => File.new(__dir__+"/files/notions/corps.jpg"))
-not29 = Notion.create(name:"L'organe", :photo => File.new(__dir__+"/files/notions/organe.jpg"))
-not30 = Notion.create(name:"La santé", :photo => File.new(__dir__+"/files/notions/sante.jpg"))
-not31 = Notion.create(name:"L'hygiène", :photo => File.new(__dir__+"/files/notions/hygiene.jpg"))
-not32 = Notion.create(name:"Le sommeil", :photo => File.new(__dir__+"/files/notions/sommeil.jpg"))
-not33 = Notion.create(name:"La position", :photo => File.new(__dir__+"/files/notions/position.jpg"))
-not34 = Notion.create(name:"La sexualité", :photo => File.new(__dir__+"/files/notions/sexualite.jpg"))
-not35 = Notion.create(name:"La technique", :photo => File.new(__dir__+"/files/notions/technique.jpg"))
-not36 = Notion.create(name:"L'instrument", :photo => File.new(__dir__+"/files/notions/instrument.jpg"))
-not37 = Notion.create(name:"L'ordinateurs", :photo => File.new(__dir__+"/files/notions/ordinateur.jpg"))
-not38 = Notion.create(name:"L'animal", :photo => File.new(__dir__+"/files/notions/animaux.jpg"))
-not39 = Notion.create(name:"L'invertébré", :photo => File.new(__dir__+"/files/notions/invertebres.jpg"))
-not40 = Notion.create(name:"Le vertébré", :photo => File.new(__dir__+"/files/notions/vertebre.jpg"))
-not41 = Notion.create(name:"La plante", :photo => File.new(__dir__+"/files/notions/plante.jpg"))
-not42 = Notion.create(name:"Le pouvoir", :photo => File.new(__dir__+"/files/notions/pouvoir.jpg"))
-not43 = Notion.create(name:"La politique", :photo => File.new(__dir__+"/files/notions/politique.jpg"))
-not44 = Notion.create(name:"Le pays", :photo => File.new(__dir__+"/files/notions/pays.jpg"))
-not45 = Notion.create(name:"La justice", :photo => File.new(__dir__+"/files/notions/justice.jpg"))
-not46 = Notion.create(name:"La sécurité", :photo => File.new(__dir__+"/files/notions/securite.jpg"))
-not47 = Notion.create(name:"Le militaire", :photo => File.new(__dir__+"/files/notions/militaire.jpg"))
-not48 = Notion.create(name:"La famille", :photo => File.new(__dir__+"/files/notions/famille.jpg"))
-not49 = Notion.create(name:"Le mariage", :photo => File.new(__dir__+"/files/notions/mariage.jpg"))
-not50 = Notion.create(name:"La matière", :photo => File.new(__dir__+"/files/notions/matiere.jpg"))
-not51 = Notion.create(name:"L'atome", :photo => File.new(__dir__+"/files/notions/atome.jpg"))
-not52 = Notion.create(name:"Le déchet", :photo => File.new(__dir__+"/files/notions/dechet.jpg"))
-not53 = Notion.create(name:"Le feu", :photo => File.new(__dir__+"/files/notions/feu.jpg"))
-not54 = Notion.create(name:"L'eau", :photo => File.new(__dir__+"/files/notions/eau.jpg"))
-not55 = Notion.create(name:"La force", :photo => File.new(__dir__+"/files/notions/force.jpg"))
-not56 = Notion.create(name:"L'edifice", :photo => File.new(__dir__+"/files/notions/edifice.jpg"))
-not57 = Notion.create(name:"La ville", :photo => File.new(__dir__+"/files/notions/ville.jpg"))
-not58 = Notion.create(name:"La voie", :photo => File.new(__dir__+"/files/notions/voie.jpg"))
-not59 = Notion.create(name:"L'espace", :photo => File.new(__dir__+"/files/notions/espace.jpg"))
-not60 = Notion.create(name:"L'orientation", :photo => File.new(__dir__+"/files/notions/orientation.jpg"))
-not61 = Notion.create(name:"La distance", :photo => File.new(__dir__+"/files/notions/distance.jpg"))
-not62 = Notion.create(name:"L'univers", :photo => File.new(__dir__+"/files/notions/univers.jpg"))
-not63 = Notion.create(name:"La Terre", :photo => File.new(__dir__+"/files/notions/terre.jpg"))
-not64 = Notion.create(name:"La mer", :photo => File.new(__dir__+"/files/notions/mer.jpg"))
-not65 = Notion.create(name:"Le continent", :photo => File.new(__dir__+"/files/notions/continent.jpg"))
-not66 = Notion.create(name:"Le climat", :photo => File.new(__dir__+"/files/notions/climat.jpg"))
-not67 = Notion.create(name:"La saison", :photo => File.new(__dir__+"/files/notions/saison.jpg"))
-not68 = Notion.create(name:"Le temps", :photo => File.new(__dir__+"/files/notions/temps.jpg"))
-not69 = Notion.create(name:"La date-Calendrier", :photo => File.new(__dir__+"/files/notions/calendrier.jpg"))
-not70 = Notion.create(name:"Le fait", :photo => File.new(__dir__+"/files/notions/fait.jpg"))
-not71 = Notion.create(name:"L'intellect", :photo => File.new(__dir__+"/files/notions/intellect.jpg"))
-not72 = Notion.create(name:"Le savoir", :photo => File.new(__dir__+"/files/notions/savoir.jpg"))
-not73 = Notion.create(name:"L'apprentissage", :photo => File.new(__dir__+"/files/notions/apprentissage.jpg"))
-not74 = Notion.create(name:"Le sens", :photo => File.new(__dir__+"/files/notions/sens.jpg"))
-not75 = Notion.create(name:"Oui-Non", :photo => File.new(__dir__+"/files/notions/ouinon.jpg"))
-not76 = Notion.create(name:"La verité", :photo => File.new(__dir__+"/files/notions/verite.jpg"))
-not77 = Notion.create(name:"La société", :photo => File.new(__dir__+"/files/notions/societe.jpg"))
-not78 = Notion.create(name:"La fête", :photo => File.new(__dir__+"/files/notions/fete.jpg"))
-not79 = Notion.create(name:"L'esprit", :photo => File.new(__dir__+"/files/notions/esprit.jpg"))
-not80 = Notion.create(name:"La religion", :photo => File.new(__dir__+"/files/notions/religion.jpg"))
-not81 = Notion.create(name:"Le nombre", :photo => File.new(__dir__+"/files/notions/nom.jpg"))
-not82 = Notion.create(name:"La mesure", :photo => File.new(__dir__+"/files/notions/mesure.jpg"))
-not83 = Notion.create(name:"La dimension", :photo => File.new(__dir__+"/files/notions/dimension.jpg"))
-not84 = Notion.create(name:"Le sentiment", :photo => File.new(__dir__+"/files/notions/sentiment.jpg"))
-not85 = Notion.create(name:"La salutation", :photo => File.new(__dir__+"/files/notions/salutation.jpg"))
-not86 = Notion.create(name:"Faire", :photo => File.new(__dir__+"/files/notions/faire.jpg"))
-not87 = Notion.create(name:"La finalité", :photo => File.new(__dir__+"/files/notions/finalite.jpg"))
-not88 = Notion.create(name:"Le travail", :photo => File.new(__dir__+"/files/notions/travail.jpg"))
-not89 = Notion.create(name:"L'agriculture", :photo => File.new(__dir__+"/files/notions/agriculture.jpg"))
-not90 = Notion.create(name:"L'industrie", :photo => File.new(__dir__+"/files/notions/industrie.jpg"))
-not91 = Notion.create(name:"La vision", :photo => File.new(__dir__+"/files/notions/vision.jpg"))
-not92 = Notion.create(name:"L'audition", :photo => File.new(__dir__+"/files/notions/audition.jpg"))
-not93 = Notion.create(name:"Le toucher", :photo => File.new(__dir__+"/files/notions/toucher.jpg"))
-not94 = Notion.create(name:"L'être humain", :photo => File.new(__dir__+"/files/notions/etrehumain.jpg"))
-not95 = Notion.create(name:"Soi", :photo => File.new(__dir__+"/files/notions/soi.jpg"))
-not96 = Notion.create(name:"L'objet", :photo => File.new(__dir__+"/files/notions/objets.jpg"))
-not97 = Notion.create(name:"Le textile", :photo => File.new(__dir__+"/files/notions/textile.jpg"))
-not98 = Notion.create(name:"L'art", :photo => File.new(__dir__+"/files/notions/art.jpg"))
+puts ''
+
+puts "\e[32mYou can access the admin panel with the folowing credentials:\e[0m"
+puts "Email: admin@example.com"
+puts "Password: password"
+
+puts ''
+
+puts "\e[32mFinished\e[0m"
+
+puts ''
