@@ -5,15 +5,30 @@
 </div>
 <div class="col-xs-12 col-md-9 notions">
   <div class="row">
-    <% @notions.each do |notion| %>
-      <%= content_tag :a, href: notion_path(notion), data: { name: notion.simple_name } do %>
-        <%= image_tag notion.photo.url(:vignette), width: 300 %>
-        <div class="content">
-          <div class="gradient"></div>
+
+    <% @notions.limit(48).each do |notion| %>
+    <%= content_tag :a, class: "blocnotions1", href: notion_path(notion), data: { name: notion.simple_name } do %>
+          <%= image_tag notion.photo.url(:vignette), width: 200 %>
+      <div class="content">
+        <div class="gradient"></div>
           <span><%= notion.name %></span>
           <p>Découvrir la notion</p>
         </div>
-      <% end %>
     <% end %>
-  </div>
-</div>
+  <% end %>
+
+
+    <% @notions.last(52).each do |notion| %>
+      <%= content_tag :a, class: "blocnotions2", href: notion_path(notion), data: { name: notion.simple_name } do %>
+          <%= image_tag notion.photo.url(:vignette), width: 200 %>
+        <div class="content">
+        <div class="gradient"></div>
+          <span><%= notion.name %></span>
+          <p>Découvrir la notion</p>
+        </div>
+        <% end %>
+        <% end %>
+      </div>
+      <div id="leftarrow"><img src="../../assets/images/left_arrow.png" alt="leftarrow" /> </div>
+      <div id="rightarrow"><img src="../../assets/images/right_arrow.png" alt="righttarrow" /> </div>
+    </div>
