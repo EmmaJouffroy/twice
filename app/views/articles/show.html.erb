@@ -62,8 +62,8 @@
 							<% end %>
 						</table>
 					</details>
-					<p>Notions liées à l'article : </p>
-					<p>
+					<p class="archives">Notions liées à l'article : </p>
+					<p class="archives">
 						<% article.notions.each do |n| %>
 							<%= link_to n.name, notion_path(n.id)%>,
 								<% end %>
