@@ -37,3 +37,8 @@ p.test {
   max-width: 800px;
   max-height: 500px;
   }
+
+  details, .archives {
+    clear: both;
+    margin-left: 0;
+  }
