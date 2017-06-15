@@ -45,11 +45,12 @@
 
   				<h2 class="text-center titre_article"><%= article.titre %></h2>
 					<div class="middle"><%= image_tag article.photo %></div>
+					<p class="test">
+  					<%= article.content.gsub("\n", "<br>").html_safe %>
+  				</p>
 					<p class="legende"><%= article.legende %>
   				<em><%= article.place %></em>
-  				<p class="test">
-  					<%= article.content.gsub("\n", "<br>").html_safe %>
-  				</p></br></hr>
+  				</br></hr>
 					<details>
 						<summary>
 						Consulter les Archives de l'article
