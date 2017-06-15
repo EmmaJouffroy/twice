@@ -15,9 +15,11 @@ p.test {
     width: 600px;
     height: 500px;
     overflow-y: scroll;
+    padding-left: 50px;
 }
   p.legende {
     max-width: 600px;
+    float: left;
     /* float: right; */
     /* margin: 0; */
     /* clear: both; */
