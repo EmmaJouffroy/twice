@@ -25,6 +25,25 @@ var search = {
   }
 }
 
+$(document).ready(function()
+{
+console.log("bonjour");
+$(".blocnotions2").hide();
+$("#leftarrow").hide();
+$("#rightarrow").click(function(){
+	$(".blocnotions1").hide();
+	$(".blocnotions2").show();
+	$("#rightarrow").hide();
+	$("#leftarrow").show();
+});
+$("#leftarrow").click(function(){
+	$(".blocnotions2").hide();
+	$(".blocnotions1").show();
+	$("#leftarrow").hide();
+	$("#rightarrow").show();
+});
+});
+
 window.addEventListener("load",function(){
   var input = document.querySelector("#search");
   if (input) {

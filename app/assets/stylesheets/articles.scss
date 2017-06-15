@@ -2,16 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.middle {
-  width: 800px;
- max-width: 800px;
-margin:  auto;
- img {
-   max-width: 800px;
- }
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.cd-horizontal-timeline .events-content li>* {
+    /* max-width: 800px; */
+    margin: 0 75px;
 }
 
-.titre_article {
-  font-family: "avenir next";
-  font-weight: lighter;
+p.test {
+    width: 600px;
+    height: 500px;
+    overflow-y: scroll;
 }
+  p.legende {
+    max-width: 600px;
+    /* float: right; */
+    /* margin: 0; */
+    /* clear: both; */
+}
+
+.middle {
+    /* width: 800px; */
+    /* max-width: 600px; */
+    margin-right: 0;
+    float: left;
+    }
