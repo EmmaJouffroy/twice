@@ -11,7 +11,7 @@
     margin: 0 75px;
 }
 
-p.test {
+div.test {
     width: 600px;
     height: 500px;
     overflow-y: scroll;
@@ -41,4 +41,13 @@ p.test {
   details, .archives {
     clear: both;
     margin: 0;
+  }
+
+  .cache {
+      height: 200px;
+      width: 300px;
+      background-color: red;
+      position: absolute;
+      bottom:200px;
+      overflow:visible;
   }
