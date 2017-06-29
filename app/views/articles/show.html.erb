@@ -68,6 +68,9 @@
 							<%= link_to n.name, notion_path(n.id)%>,
 								<% end %>
 					</p>
+					<audio controls>
+  <source src="https://cloud.cyberspace.ovh/index.php/s/HSZEzn40Xf2FV0T/download" type="audio/mpeg">
+	</audio>
 					<% if admin_user_signed_in? %>
 						<%= link_to "edit article", edit_article_path(article) %>
 					<% end %>
